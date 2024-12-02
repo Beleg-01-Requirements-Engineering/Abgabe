@@ -10,7 +10,7 @@ jobs:
         with:
           sparse-checkout: paper-tex
       - name: Compile PDF with Makefile in `paper-tex` directory
-        run: cd tex && make all
+        run: cd paper-tex && make all
       - name: Move generated paper PDF to repository root
         run: mv paper-tex/01-Requirements-Engineering.pdf .
       - name: Add & Commit
