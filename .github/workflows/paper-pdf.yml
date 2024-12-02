@@ -10,7 +10,13 @@ jobs:
         with:
           sparse-checkout: paper-tex
       - name: Compile PDF with Makefile in `paper-tex` directory
-        run: cd paper-tex && make all
+        uses: xu-cheng/texlive-action@v2
+        with:
+          scheme: small
+          run: |
+            apk add make
+            cd paper-tex
+            make all
       - name: Move generated paper PDF to repository root
         run: mv paper-tex/01-Requirements-Engineering.pdf .
       - name: Add & Commit
