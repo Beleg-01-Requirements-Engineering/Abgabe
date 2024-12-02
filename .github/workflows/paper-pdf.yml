@@ -29,8 +29,6 @@ jobs:
   Commit-PDF:
     runs-on: ubuntu-latest
     needs: Build-PDF
-    permissions:
-      actions: write
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
