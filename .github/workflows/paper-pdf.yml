@@ -1,0 +1,21 @@
+name: Paper PDF
+run-name: Build paper PDF from LaTeX source
+on: [push]
+jobs:
+  Build-PDF:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: paper-tex
+      - name: Compile PDF with Makefile in `paper-tex` directory
+        run: cd tex && make all
+      - name: Move generated paper PDF to repository root
+        run: mv paper-tex/01-Requirements-Engineering.pdf .
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          add: "01-Requirements-Engineering.pdf"
+          default_author: github_actions
+          message: Add paper PDF built with GitHub Actions
