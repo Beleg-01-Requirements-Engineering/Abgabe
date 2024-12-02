@@ -6,6 +6,7 @@ Belegarbeit im Rahmen des Moduls "Software Engineering" (https://wse-research.or
 == Dateien
 - link:01-Requirements-Engineering.pdf[Beleg-PDF]
 - link:paper-tex/01-Requirements-Engineering.tex[LaTeX-Quelldatei des Belegs]
-- link:paper-tex[Quelldateienverzeichnis für die Beleg-PDF]
+- link:paper-tex[Quellverzeichnis für die Beleg-PDF]
+- link:presentation[Quellverzeichnis für die Präsentation]
 
 == Abstract
