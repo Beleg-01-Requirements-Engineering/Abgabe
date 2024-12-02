@@ -1,9 +1,8 @@
 = Requirements Engineering: User Stories und Epics in Vorgehensmodellen
-Antonia Swiridoff; Jonas Pohl; Mose Schmiedel
+Test Author <test@example.com>
 
-:description: Belegarbeit im Rahmen des Moduls "Software Engineering" \
-              (https://wse-research.org/team/anbo[Prof. Dr. Andreas Both], \
-              Wintersemester 2024/2025 an der https://www.htwk-leipzig.de/[HTWK Leipzig])
+Belegarbeit im Rahmen des Moduls "Software Engineering"
+(https://wse-research.org/team/anbo[Prof. Dr. Andreas Both], Wintersemester 2024/2025 an der https://www.htwk-leipzig.de/[HTWK Leipzig])
 
 == Dateien
 - link:01-Requirements-Engineering.pdf[Beleg-PDF]
