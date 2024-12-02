@@ -20,7 +20,7 @@ jobs:
       - name: Move generated paper PDF to repository root
         run: mv paper-tex/01-Requirements-Engineering.pdf .
       - name: Cache compiled paper PDF
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         env:
           cache-name: cache-paper-pdf
         with:
@@ -33,7 +33,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Get previously built paper PDF
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: 01-Requirements-Engineering.pdf
           key: ${{ runner.os }}-paper-pdf
