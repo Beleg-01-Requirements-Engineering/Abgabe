@@ -19,12 +19,26 @@ jobs:
             make all
       - name: Move generated paper PDF to repository root
         run: mv paper-tex/01-Requirements-Engineering.pdf .
+      - name: Cache compiled paper PDF
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-paper-pdf
+        with:
+          path: 01-Requirements-Engineering.pdf
+          key: ${{ runner.os }}-paper-pdf
   Commit-PDF:
     runs-on: ubuntu-latest
     needs: Build-PDF
     permissions:
       actions: write
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Get previously built paper PDF
+        uses: actions/cache@v2
+        with:
+          path: 01-Requirements-Engineering.pdf
+          key: ${{ runner.os }}-paper-pdf
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.4
         with:
