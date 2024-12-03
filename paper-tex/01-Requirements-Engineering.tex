@@ -1,12 +1,6 @@
-%% The first command in your LaTeX source must be the \documentclass command.
 \documentclass[acmtog]{acmart}
 \usepackage[english,ngerman]{babel}
 \usepackage[utf8]{inputenc}
-
-%% \BibTeX command to typeset BibTeX logo in the docs
-\AtBeginDocument{%
-  \providecommand\BibTeX{{%
-    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
 
 \copyrightyear{2024}
 \acmYear{2024}
@@ -21,59 +15,118 @@
 \settopmatter{printacmref=false} % Removes citation information below abstract
 \renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
 
-%%
-%% end of the preamble, start of the body of the document source.
 \begin{document}
 
-%%
-%% The "title" command has an optional parameter,
-%% allowing the author to define a "short title" to be used in page headers.
 \title{Requirements Engineering: User Stories und Epics in Vorgehensmodellen}
 
-%%
-%% The "author" command and its associated commands are used to define
-%% the authors and their affiliations.
-%% Of note is the shared affiliation of the first two authors, and the
-%% "authornote" and "authornotemark" commands
-%% used to denote shared contribution to the research.
-\author{Antonia Swiridoff}
-\authornote{Alle Studierenden trugen zu gleichen Teilen zu dieser Arbeit bei.}
 \author{Jonas Pohl}
-\authornotemark[1]
+\authornote{Alle Studierenden trugen zu gleichen Teilen zu dieser Arbeit bei.}
 \author{Mose Schmiedel}
+\authornotemark[1]
+\author{Antonia Swiridoff}
 \authornotemark[1]
 \affiliation{%
 	\institution{Hochschule für Technik, Wirtschaft und Kultur Leipzig (HTWK Leipzig)}
 	\streetaddress{Karl-Liebknecht-Str. 132}
 	\city{Leipzig}
-	%\state{Ohio}
 	\country{Deutschland}
 	\postcode{04277}
 }
-%%
-%% By default, the full list of authors will be used in the page
-%% headers. Often, this list is too long, and will overlap
-%% other information printed in the page headers. This
-%command allows
-%% the author to define a more concise list
-%% of authors' names for this purpose.
+
 \renewcommand{\shortauthors}{Swiridoff, Pohl und Schmiedel}
 
-%%
-%% The abstract is a short summary of the work to be presented in the
-%% article.
+
 \begin{abstract}
 \end{abstract}
 
 \maketitle
 
-%% The next two lines define the bibliography style to be used, and
-%% the bibliography file.
+
+\section{Einleitung}
+
+\begin{itemize}
+\item Motivation
+\item Ziel der Arbeit
+\item (Bedeutung von Requirements Engineering (RE) in der Softwareentwicklung und die wachsende Relevanz agiler Ansätze.)
+\item Zielsetzung: Untersuchung der Rolle von User Stories und Epics in agilen Vorgehensmodellen und deren Einfluss auf Kommunikation und Anpassungsfähigkeit.
+\item Struktur des Papers: Kurzbeschreibung der Inhalte der einzelnen Kapitel.
+\end{itemize}
+
+\section{Requirements Engineering allgemein (kurz)}
+\begin{itemize}
+	\item Definition und Einordnung: RE als Teilbereich des Software Engineerings.
+	\item Arten von Anforderungen: Funktionale und nicht-funktionale Anforderungen, Anforderungsquellen.
+	\item Ziele und Aufgaben: Klärung von Anforderungen, Sicherstellung von Qualität und Kundenzufriedenheit.
+\end{itemize}
+
+\section{Epics und User Stories}
+\begin{itemize}
+	\item Was sind User Stories und Epics?
+	\item Unterschied zw. User Stories und klassischen Anforderungen.
+	\item Rolle der Akzeptanzkriterien.
+	\item Definition und Zweck (grobe Anforderungen, die später verfeinert werden).
+	\item Hierarchie (Epic -> User Story -> Task).
+	\item User Stories: Struktur (As a [user], I want to [goal], so that [benefit]).
+	\item User Story und Epic klar voneinander trennen, was unterscheidet sie voneinander?
+				(Beispiel, was später fortgesetzt wird?)
+	\item Was macht gute User Story / gutes Epic aus.
+\end{itemize}
+
+\section{Autom. Verarbeitung von User Storys am Beispiel von Cucumber}
+
+\section{Agile Vorgehensmodelle}
+
+\begin{itemize}
+	\item Besonderheiten im agilen Kontext: Herausforderungen und Anpassungen durch das Agile Manifesto und dessen Prinzipien (allgemein auf das agile Manifest nochmal eingehen).
+	\item Kanban / Scrum / FDD für unterschiedliche Teamgrößen
+\end{itemize}
+
+\subsection{Kanban}
+	\begin{itemize}
+		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+		\item Nutzen? geeignet? Vorteile? Risiken?
+	\end{itemize}
+
+\subsection{Scrum}
+	\begin{itemize}
+		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+		\item \item Nutzen? geeignet? Vorteile? Risiken?
+	\end{itemize}
+
+\subsection{FDD}
+	\begin{itemize}
+		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+		\item Nutzen? geeignet? Vorteile? Risiken?
+	\end{itemize}
+
+
+
+\section{Diskussion}
+
+\begin{itemize}
+	\item Vorteile? Nutzen?
+	\item Risiken?
+	\item Probleme bei der Anwendung von User Stories und Epics: unklare Anforderungen, Gefahr der Über- oder Unterpriorisierung.
+	\item aufzeigen wie User Story und Epic helfen um agil arbeiten zu können
+\end{itemize}
+
+\section{Zusammenfassung und Ausblick}
+
+\begin{itemize}
+	\item Zusammenfassung: User Stories und Epics als Mittel zur Förderung von effektiver Kommunikation und Anpassungsfähigkeit.
+	\item Ausblick:
+	\begin{itemize}
+		\item Potenziale durch KI-gestützte Tools zur automatischen Erstellung oder Analyse von User Stories.
+	\end{itemize}
+\end{itemize}
+
+
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{01-Requirements-Engineering}
 
-%%
-%% If your work has an appendix, this is the place to put it.
 \appendix
 
 \section{Anhang 1}
@@ -108,5 +161,3 @@ Damit es im Literaturverzeichnis angezeigt wird:\\
 
 \end{document}
 \endinput
-%%
-%% End of file `sample-acmtog.tex'.
