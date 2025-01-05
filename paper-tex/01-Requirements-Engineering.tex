@@ -1,6 +1,8 @@
 \documentclass[acmtog]{acmart}
-\usepackage[english,ngerman]{babel}
+\usepackage[ngerman, english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \copyrightyear{2024}
 \acmYear{2024}
@@ -45,11 +47,11 @@
 \section{Einleitung}
 
 \begin{itemize}
-\item Motivation
-\item Ziel der Arbeit
-\item (Bedeutung von Requirements Engineering (RE) in der Softwareentwicklung und die wachsende Relevanz agiler Ansätze.)
-\item Zielsetzung: Untersuchung der Rolle von User Stories und Epics in agilen Vorgehensmodellen und deren Einfluss auf Kommunikation und Anpassungsfähigkeit.
-\item Struktur des Papers: Kurzbeschreibung der Inhalte der einzelnen Kapitel.
+	\item Motivation
+	\item Ziel der Arbeit
+	\item (Bedeutung von Requirements Engineering (RE) in der Softwareentwicklung und die wachsende Relevanz agiler Ansätze.)
+	\item Zielsetzung: Untersuchung der Rolle von User Stories und Epics in agilen Vorgehensmodellen und deren Einfluss auf Kommunikation und Anpassungsfähigkeit.
+	\item Struktur des Papers: Kurzbeschreibung der Inhalte der einzelnen Kapitel.
 \end{itemize}
 
 \section{Requirements Engineering allgemein (kurz)}
@@ -60,6 +62,20 @@
 \end{itemize}
 
 \section{Epics und User Stories}
+Wie dem \emph{Agile Manifesto} \cite{beedle_principles_2001} festgehalten, muss eine agile Softwareentwicklung
+auf sich verändernde Anforderungen reagieren können.
+Dies führt dazu, dass viele herkömmliche Methoden zur Anforderungsanalyse für diese Art von Softwareentwicklung
+nicht mehr geeignet sind.
+
+Um mit diesen Veränderungen im Requirements Engineering umzugehen, sind neue Werkzeuge und Konzepte
+für diese Phase der Softwareentwicklung entstanden, welche die Prinzipien der agilen Softwareentwicklung
+berücksichtigen und unterstützen.
+
+Das Konzept von \emph{Epics und User Stories} gehört zu diesen neuen Methoden und soll das Entwicklerteam
+während bei der Anforderungsanalyse unterstützen. Im folgenden Abschnitt werden die zugrundeliegenden Definitionen
+dieses Konzeptes vorgestellt, anhand eines Beispiels verdeutlicht und die Vor- und Nachteile beleuchtet.
+
+\subsection{Definition ``Epic''}
 \begin{itemize}
 	\item Was sind User Stories und Epics?
 	\item Unterschied zw. User Stories und klassischen Anforderungen.
@@ -68,11 +84,134 @@
 	\item Hierarchie (Epic -> User Story -> Task).
 	\item User Stories: Struktur (As a [user], I want to [goal], so that [benefit]).
 	\item User Story und Epic klar voneinander trennen, was unterscheidet sie voneinander?
-				(Beispiel, was später fortgesetzt wird?)
+	      (Beispiel, was später fortgesetzt wird?)
 	\item Was macht gute User Story / gutes Epic aus.
 \end{itemize}
 
-\section{Autom. Verarbeitung von User Storys am Beispiel von Cucumber}
+\subsection{Definition ``User Story''}
+\cite[p. 4]{cohn_user_2004} beschreibt ``[e]ine \emph{User Story} [als] eine Funktionalität, welche wertvoll für einen Nutzer [...] eines Systems
+oder Software ist''.
+Diese Funktionalität wird dabei mit ein bis zwei Sätzen in folgender Struktur formuliert:
+
+\vspace{1em}
+\texttt{As a \underline{<type of user>}, I want to \underline{<goal>}\\
+	\hspace*{13em} so that \underline{<achieved value>}.}
+\begin{flushright}
+	\cite[p.]{balzert09}
+\end{flushright}
+
+
+\vspace{.5em}
+
+\verb|<Type of user>|, \verb|<goal>| und \verb|<achieved value>| stellen hierbei Platzhalter dar,
+welche je nach Anforderung ausgefüllt werden müssen.
+\cite{jeffries_essential_2001} unterteilt eine User Story in folgende drei Teile:
+\begin{description}
+	\item[Card] repräsentiert die Anforderung, strukturiert nach oben genannter Vorlage.
+	\item[Conversation] findet als (verbale) Kommunikation der Anforderung zwischen Kunde zu Entwickler statt.
+	\item[Confirmation] besteht aus den Akzeptanztests, welche die notwendigen Eigenschaften der Anforderung festlegen.
+\end{description}
+
+Dabei sei hervorgehoben, dass die Card nicht etwa als vollständige Spezifikation für die geforderte Funktionalität dient,
+sondern lediglich als Erinnerung und Grundlage für spätere Diskussion.
+Diese wird in der Conversation durchgeführt und gegebenenfalls dokumentiert.
+Ziel der Conversation ist es dabei die Details der Funktionalität zu klären
+und durch Akzeptanztests in der Confirmation als Spezifikation für die Implementierung
+der Funktionalität festzuhalten \cite[p. 4]{cohn_user_2004}.
+
+\subsection{Beispiel}
+Um das Konzept der \emph{Epics und User Stories} besser zu verdeutlichen, wurden alle Beispiele in diesem
+Artikel für ein imaginäres Kursverwaltungssystem erstellt.
+Dieses System soll Mitgliedern einer Hochschule die digitalen Verwaltung von Kursen und deren zugehörigen Informationen
+und Prüfungen und außerdem das An- und Abmelden von Studierenden zu Kursen, bzw. Prüfungen ermöglichen.
+
+In diesem Abschnitt wird am Beispiel eines spezifischen Epics der Umgang mit Epics und User Stories erläutert.
+Das Epic ist mit der Vorlage aus dem vorhergehenden Abschnitt formuliert.
+Dabei sind die Phrasen, welche für die Platzhalter eingesetzt wurden, unterstrichen.
+Das gewählte Epic lautet wie folgt:
+
+\vspace{1em}
+\texttt{Als \underline{Professor} möchte ich \underline{meine Kurse digital }\\
+	\hspace*{3em}\underline{ verwalten}, damit \underline{die Studierenden }\\
+	\hspace*{4em} \underline{ unabhängig mit diesen interagieren können}.}
+\vspace{1em}
+
+Wie schon in der Definition des Epics angesprochen handelt es sich bei einem Epic um ein umfangreiches
+Arbeitspaket, welches mehr eine Vision oder größeres Ziel ausdrückt, als eine einzelne Anforderung.
+Im Beispiel ist dies unschwer durch den Gebrauch von groben Formulierungen zu erkennen. So wird zum
+Beispiel lediglich festgelegt, dass ein \underline{\texttt{Professor}} seine \underline{\texttt{Kurse digital verwalten}}
+möchte. Diese Formulierung lässt einen großen Spielraum für die spätere Implementierung und erzwingt gleichzeitig
+auch die Eingrenzung des Systems durch weitere Anforderungen, damit dieses erfolgreich modelliert und implementiert werden kann.
+
+Einige Fragen, welche das Epic noch offen lässt sind zum Beispiel:
+\begin{itemize}
+	\item Was bedeutet digital verwalten?
+	\item Soll eine Web-, Desktop- oder Mobile-Anwendung entwickelt werden?
+	\item Welche Art von Interaktion soll für die Professoren und Studierenden möglich sein?
+\end{itemize}
+
+Die Antworten auf diese Fragen stellen weitere Anforderungen an das System dar.
+Diese werden wiederum als User Stories formuliert und weiterverarbeit.
+Selbstverständlich können auch hier nocheinmal User Stories entstehen, welche
+zu generell sind und deshalb weitere Verfeinerung benötigen.
+Tatsächlich handelt es sich dann um ein weiteres Epic, welches wiederum durch den
+vorher erläuterten Prozess verfeinert werden muss.
+Hierbei ist es allerdings wichtig, dass User Stories nicht bis in das kleinste Detail
+aufgeteilt werden dürfen \cite[p. 6]{cohn_user_2004}.
+Wie in der Definition erwähnt gehört zu einer User Story neben der \emph{Card}, der Formulierung,
+auch die \emph{Conversation}, in welcher die Details der User Story geklärt werden.
+Die Absicht User Stories so spezifisch wie möglich zu formulieren würde hier nur zu überflüssiger
+Redundanz führen, welche schlussendlich die Effizienz des Entwicklungsteam senkt.
+
+Anhand dieser Überlegungen sind folgende zwei User Stories als Verfeinerung des oben genannten Epics verfasst:
+
+\vspace{1em}
+\texttt{Als \underline{Professor} möchte ich \underline{die Kursverwaltung per }\\
+	\hspace*{2em} \underline{ Weboberfläche bedienen können}, damit\\
+	\hspace*{6em} \underline{ich von unterschiedlichen Geräten }\\
+	\hspace*{14em} \underline{ darauf zugreifen kann.}}
+\vspace{1em}
+
+Diese User Story geht auf die ersten beiden Fragen ein und stellt eine in diesem Punkt
+eine Spezialisierung der Anforderung dar.
+
+Hierbei sei anzumerken, dass es ausgehend von dem Epic keine eindeutig richtige oder
+falsche Spezialisierung gibt.
+In diesem konkreten Fall wären alle drei Möglichkeiten,
+nämlich eine Web-, Desktop- oder Mobile-Anwendung zu entwickeln, korrekt gewesen.
+Das Epic lässt die Interpretation von \emph{digital} offen.
+
+Aus diesem Grund wird in vielen Fällen für die Spezialisierung des Epics weitere Kommunikation
+mit dem Kunden des System von Nöten sein.
+Meist kann nur dieser die korrekte Interpretation der Anforderung liefern.
+
+Wie und ob diese Kommunikation stattfindet ist allerdings Sache des (agilen) Vorgehensmodells, welches
+das Entwicklerteam anwendet.
+
+\vspace{1em}
+\texttt{Als \underline{Professor} möchte ich \underline{die Kursinformationen }\\
+	\hspace*{4.5em} \underline{ verändern können}, damit \underline{sie richtig} sind.}
+\vspace{1em}
+
+In dieser zweiten User Story findet eine Spezialisierung der dritten Frage statt.
+Bei dieser Frage geht es nicht darum, die Mehrdeutigkeit eines verwendeten Begriffs zu klären,
+sondern konkrete Beispiele aus einem durch das Epic aufgespannten Anforderungsbereich
+zu formulieren.
+
+So könnten in Zukunft noch weitere User Stories hinzukommen, die das Epic im Bezug auf die dritte
+Frage spezialisieren.
+Zum Beispiel könnte eine weitere User Story die eine mögliche Interaktion der Studierenden beschreiben:
+
+\vspace{1em}
+\texttt{Als \underline{Studierender} möchte ich \underline{mich für die Teilnahme }\\
+	\hspace*{2em}\underline{ an einem Kurs registrieren },\\
+	\hspace*{4em}damit \underline{mir diese Teilnahme angerechnet wird}.}
+\vspace{1em}
+
+\subsection{Was sind gute User Stories?}
+
+
+\section{Automatische Verarbeitung von User Stories am Beispiel von Cucumber}
 
 \section{Agile Vorgehensmodelle}
 
@@ -82,25 +221,25 @@
 \end{itemize}
 
 \subsection{Kanban}
-	\begin{itemize}
-		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
-		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
-		\item Nutzen? geeignet? Vorteile? Risiken?
-	\end{itemize}
+\begin{itemize}
+	\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+	\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+	\item Nutzen? geeignet? Vorteile? Risiken?
+\end{itemize}
 
 \subsection{Scrum}
-	\begin{itemize}
-		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
-		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
-		\item \item Nutzen? geeignet? Vorteile? Risiken?
-	\end{itemize}
+\begin{itemize}
+	\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+	\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+	\item \item Nutzen? geeignet? Vorteile? Risiken?
+\end{itemize}
 
 \subsection{FDD}
-	\begin{itemize}
-		\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
-		\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
-		\item Nutzen? geeignet? Vorteile? Risiken?
-	\end{itemize}
+\begin{itemize}
+	\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
+	\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
+	\item Nutzen? geeignet? Vorteile? Risiken?
+\end{itemize}
 
 
 
@@ -118,9 +257,9 @@
 \begin{itemize}
 	\item Zusammenfassung: User Stories und Epics als Mittel zur Förderung von effektiver Kommunikation und Anpassungsfähigkeit.
 	\item Ausblick:
-	\begin{itemize}
-		\item Potenziale durch KI-gestützte Tools zur automatischen Erstellung oder Analyse von User Stories.
-	\end{itemize}
+	      \begin{itemize}
+		      \item Potenziale durch KI-gestützte Tools zur automatischen Erstellung oder Analyse von User Stories.
+	      \end{itemize}
 \end{itemize}
 
 
@@ -132,6 +271,13 @@
 \section{Anhang 1}
 
 \subsection{Übungsaufgaben}
+\subsubsection{Epics und User Stories}
+Ein Lebensmittelverwaltungssystem soll Privatpersonen helfen ihre gelagerten Lebensmittel abzurufen,
+den Lebensmittelverbrauch zu überwachen und bei der Essensplanung unterstützen.
+
+Finden Sie eine geeignete Anforderung für dieses System, welche einem Epic entspricht und formulieren Sie drei zugehörige
+User Stories mit Hilfe der Gherkin-Grammatik!
+
 
 \subsection{Part Two}
 
