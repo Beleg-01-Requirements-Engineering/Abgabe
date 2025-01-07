@@ -5,17 +5,17 @@
 %% The original source files were:
 %%
 %% acmart.dtx  (with options: `class')
-%% 
+%%
 %% IMPORTANT NOTICE:
-%% 
+%%
 %% For the copyright see the source file.
-%% 
+%%
 %% Any modified versions of this file must be renamed
 %% with new filenames distinct from acmart.cls.
-%% 
+%%
 %% For distribution of the original source see the terms
 %% for copying and modification in the file acmart.dtx.
-%% 
+%%
 %% This generated file may be distributed as long as the
 %% original source files, as listed above, are part of the
 %% same distribution. (The sources need not necessarily be
@@ -2779,8 +2779,8 @@
   %\def\email##1##2{\unskip, \nolinkurl{##2}}%
   %\addresses
   %\egroup
-  Diese Arbeit wurde im Rahmen des Mastermoduls \glqq Software Engineering\grqq\ (Dozent: Prof. Dr. Andreas Both) an der HTWK Leipzig im Wintersemester 2023/2024 erstellt.
-  Diese Arbeit ist under der Lizenz ... freigegeben.}
+  Diese Arbeit wurde im Rahmen des Mastermoduls \glqq Software Engineering\grqq\ (Dozent: Prof. Dr. Andreas Both) an der HTWK Leipzig im Wintersemester 2024/2025 erstellt.
+  Diese Arbeit ist under der Lizenz MIT freigegeben.}
 \AtEndDocument{\if@ACM@nonacm\else\if@ACM@journal
   \ifx\@authorsaddresses\@empty
   \ClassWarningNoLine{\@classname}{Authors'
@@ -2999,11 +2999,11 @@
       \fancyhead[RO]{\@headfootfont
         \shorttitle\quad\textbullet\quad\@acmArticlePage\ACM@linecountR}%
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize 
+        \fancyfoot[RO,LE]{\footnotesize
         %\@journalNameShort, Vol. \@acmVolume, No.
         %\@acmNumber, Article \@acmArticle.  Publication date: %\@acmPubDate.
         % 2nd and FOLLOWING PAGES
-        Modul \glqq Software Engineering\grqq, Prof.~Dr.~Andreas~Both, Wintersemester 2023/2024
+        Modul \glqq Software Engineering\grqq, Prof.~Dr.~Andreas~Both, Wintersemester 2024/2025
         }%
       \fi
     \else % Proceedings
@@ -3114,12 +3114,12 @@
       \fancyhead[LO]{\ACM@linecountL\@acmBadgeL}%
     \or % acmtog
       \if@ACM@nonacm\else%
-        \fancyfoot[RO,LE]{\footnotesize 
+        \fancyfoot[RO,LE]{\footnotesize
         %\@journalNameShort, Vol. \@acmVolume, No.
         %\@acmNumber, Article \@acmArticle.  Publication date:
         %\@acmPubDate.
         % FIRST PAGE
-        % Modul \glqq Software Engineering\grqq, Prof.~Dr.~Andreas~Both, Wintersemester 2023/2024
+        % Modul \glqq Software Engineering\grqq, Prof.~Dr.~Andreas~Both, Wintersemester 2024/2025
         }%
       \fi%
       \fancyhead[L]{\ACM@linecountL\@acmBadgeL}%
