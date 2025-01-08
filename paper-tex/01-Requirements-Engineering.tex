@@ -342,24 +342,229 @@ Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 
 \section{Agile Vorgehensmodelle}
 
-\begin{itemize}
-	\item Besonderheiten im agilen Kontext: Herausforderungen und Anpassungen durch das Agile Manifesto und dessen Prinzipien (allgemein auf das agile Manifest nochmal eingehen).
-	\item Kanban / Scrum / FDD für unterschiedliche Teamgrößen
-\end{itemize}
+\section{Agile Vorgehensmodelle}
 
-\subsection{Kanban}
-\begin{itemize}
-	\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
-	\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
-	\item Nutzen? geeignet? Vorteile? Risiken?
-\end{itemize}
+\subsection{Requirement Engineering in Kanban}
 
-\subsection{Scrum}
-\begin{itemize}
-	\item Wie sind Epics/ User Storys in den Arbeitsprozess eingegliedert?
-	\item Kommunikation im Team: User Stories und Epics als Kommunikationsmittel und zur Schaffung einer einheitlichen Sprache (Einfluss auf Kommunikation mit Kunden)
-	\item \item Nutzen? geeignet? Vorteile? Risiken?
-\end{itemize}
+Für das Requirement Engineering (RE) in Kanban wird dem Team viel Spielraum gelassen, 
+um seine eigenen Methoden und Vorgehensweisen zu entwickeln. Anders als bei Scrum, sind 
+in Kanban keine spezifischen Rollen für einzelne Teammitglieder vorgesehen. Eine 
+Spezialisierung einzelner Mitglieder auf bestimmte Bereiche, wie bspw. das RE, ist trotzdem 
+möglich.
+
+In Kanban wird vorgesehen, dass die Requirements und Epics in enger Zusammenarbeit mit 
+den Stakeholdern erarbeitet werden. Dabei ist für den Austausch mit dem Stakeholder keine 
+spezifische Rolle oder Methodik vorgesehen, sodass meist ein oder mehrere Teammitglieder 
+diese Aufgabe dynamisch übernehmen können. \cite{agileprocesses}
+
+Die zu den Epics gehörenden User Stories werden meist in enger Zusammenarbeit im Team erstellt, 
+geschätzt, priorisiert und ihre Akzeptanzkriterien festgelegt. Dazu steht dem Team eine Vielzahl 
+von Methoden zur Verfügung. Einige dieser Methoden werden in einem späteren Kapitel vorgestellt. 
+Es wird dabei oft versucht die entstehenden User Stories so zu konzipieren, dass sie als vertikale 
+Scheibe des Gesamtsystems umgesetzt werden können. Das bedeutet, dass ein eigenständiges, vorzeigbares 
+Produkt entsteht, das sich durch die Gesamte Architektur des Systems zieht. Dies ist allerdings 
+vor allem in komplexen Systemen nicht immer Möglich. Die technischen Details für die Implementierung 
+der User Story werden in Teams geklärt, damit die relevanten Teammitglieder sich auf eine Vorgehensweise 
+einigen können. \cite{agileprocesses}
+
+Wie größere User Stories in Kanban heruntergebrochen und welche Methoden dafür genutzt werden, bleibt 
+dem Team vollständig überlassen. Eine Methode, die man für das Herunterbrechen von User Stories verwenden 
+kann, wird in Kapitel \ref{sec:breakedown} vorgestellt. Der Zeitaufwand für eine User Story sollte am Ende ein paar 
+Tage betragen, aber nicht mehrere Wochen übersteigen. Gegebenenfalls kann das Team auch entscheiden 
+eine User Story in Tasks, also noch kleinere Aufgaben, aufzuteilen. \cite{agileprocesses}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{images/Kanban-Board-mit-userstories.png}
+  \caption{Kanban Board mit User Stories}
+    \label{fig:kanban-board}
+  \Description{}
+\end{figure}
+
+In Kanban werden die User Stories auf einem Kanban-Board visualisiert, auf dem sie in Abhängigkeit von 
+ihrem Bearbeitungszustand verschoben werden \ref{fig:kanban-board}. Meist werden die User Stories in den einzelnen 
+Zuständen nach ihrer Priorität geordnet. In Kanban kann der Inhalt des Kanban-Boards und die User Stories 
+darauf zu jeder Zeit verändert werden. So können User Stories von dem Board genommen werden, angepasst 
+werden, oder bei Bedarf in kleinere User Stories oder Tasks aufgeteilt werden. So kann das Team sehr schnell 
+auf Änderungen reagieren. \cite{agileprocesses}
+
+In Kanban liegt es im Ermessen des Teams, wann aus den fertig umgesetzten User Stories ein neuer Release 
+erstellt wird, sodass das Team flexibel entscheiden kann, wie lang ein Feedbackloop ist. \cite{agileprocesses}
+
+\subsubsection{Vorteile und Nachteile von Requirement Engineering in Kanban}
+
+Die Art und Weise, wie das RE in Kanban durchgeführt wird, ermöglicht es dem Team, sehr flexibel zu Arbeiten. 
+Das liegt daran, dass die zu bearbeitenden User Stories jeder Zeit auf dem Kanban-Board angepasst, entfernt, 
+hinzugefügt und umgeordnet werden können. Dadurch kann das Team schnell auf Änderungen wie Bugs und Requirementsänderungen 
+reagieren. Das Kanban-Board ermöglicht es auch dem Team und dem Stakeholder leichter den Überblick über den 
+Fortschritt des Projekts zu behalten und hilft dabei die Entwicklung zu dokumentieren.
+
+Eine Studie in \cite{agileprocesses} zeigt, dass ein gutes Team mit Kanban konstant und iterativ entwickeln und sich zusätzlich 
+an dynamisch verändernde Anforderungen anpassen kann. So wird das Team dazu angeregt, Lösungen aus eigener 
+Initiative zu entwickeln, ohne an eine feste Ablaufstruktur gebunden zu sein. \cite{reqkanban}
+
+Durch das RE in Kanban entstehen allerdings auch einige Herausforderungen für das Team. Aufgrund der flexiblen 
+Struktur, braucht das Team eine große Selbstverantwortung und Teamdisziplin. So muss es selbständig RE in den 
+dynamischen Entwicklungsprozess integrieren. Auch die Kommunikation und den Austausch mit den Stakeholders muss 
+das Team passend einplanen. Vor allem bei größeren, oder unerfahrenen Teams kann dieser zusätzliche Aufwand für 
+die Planung der Ablaufstruktur ein größeres Problem darstellen. \cite{kanbannod}
+
+\subsection{Requirement Engineering in Scrum}
+
+Anders als bei Kanban, ist in Scrum für das Team eine dedizierte Phase vor einem Sprint für das RE bestimmt. In dieser 
+beschäftigt sich das Team mit den User Stories für den nächsten Sprint Backlog. Diese Phase wird als Sprint Planning bezeichnet. \cite{reinscrum}
+
+Ein weiterer Unterschied zu Kanban besteht darin, dass bei dem RE in Scrum bestimmte vordefinierte Rollen im Team eine 
+große Bedeutung spielen. So ist z.B. der Scrum Master dafür verantwortlich sicherzustellen, dass das Team sich mit den 
+User Stories ordentlich beschäftigen kann. Die wichtigste Rolle für das RE in Scrum ist der Product Owner. Dieser ist 
+dafür verantwortlich den Product Backlog zu Verwalten. Das Bedeutet, dass er für das Formulieren und herunterbrechen der 
+Epics und User Stories zuständig ist, wobei er dafür auch teile des Teams mit einbeziehen kann. Deshalb ist er auch für 
+das Ermitteln der Requirements der Stakeholder zuständig und dient oft auch als direkter Ansprechpartner für diese. \cite{reinscrum}
+
+Weiterhin ist er dafür zuständig die User Stories im Product Backlog nach ihrer Priorität zu ordnen und auf ihre Machbarkeit 
+zu kontrollieren. Eine Methode, mit der man User Stories nach ihrer Priorität ordnen kann, wird in Kapitel \ref{sec:priorization} erklärt. 
+Er soll auch während des Sprint Plannings geeignete User Stories dem Team kommunizieren, um sicherzustellen, dass das Verständnis 
+des Teams mit dem des Stakeholders vereinbar ist. \cite{reinscrum}
+
+Das Team selbst hat hinsichtlich des RE die Aufgabe, während des Sprint Plannings die einzelnen User Stories für den Sprint 
+Backlog auszuwählen und deren Aufwand zu schätzen. Eine Methode zum Schätzen des Aufwands, wird in Kapitel \ref{sec:effort} vorgestellt. 
+Weiterhin muss das Team sich im Sprint Planning auf die technischen Details der Implementierung der User Stories einigen. [4]
+
+In Scrum sind Epics ein größeres Themengebiet aus zusammengehörenden Requirements. Sie repräsentieren einen Themenkomplex, der 
+zu groß ist, um ihn in einem Sprint vollständig zu implementieren. \cite{reinscrum}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{images/sprint-burndown2.png}
+  \caption{Burndown Chart für einen 2 Wochen Sprint}
+    \label{fig:burndownchart}
+  \Description{}
+\end{figure}
+
+User Stories in Scrum stellen als Inhalt des Sprint Backlogs die Ziele eines Sprints dar. Sie helfen dem Team dabei den Fortschritt 
+des Sprints in z.B. einem Burndown Chart zu erfassen. Dabei sollten die User Stories einen kleinen und ähnlichen Umfang haben, sodass 
+sich die Linie für die Abarbeitung der Story Points eines Sprints an eine linear fallende Linie annähert (siehe Abb.). So kann das 
+Team Leichter erkennen, ob sie den Zeitplan für den aktuellen Sprint einhalten können. Falls erkannt wird, dass der Sprint nicht planmäßig 
+verläuft, kann das Team über die Daily Scrums versuchen Gegenmaßnahmen einzuleiten. Sind die User Stories zu groß gewählt, fällt der 
+Graph auf dem Burndown Chart gegen Ende des Sprints immer stärker ab, was oft dazu führt, dass zu spät erkannt wird, dass der Zeitplan 
+nicht eingehalten werden kann. \cite{reinscrum} 
+
+Ein grober Richtwert, wie klein die User Stories sein sollten, liefert \cite{humanizingwork}, 
+in dem definiert wird, dass die Größe einer User Story in Scrum zwischen \( \frac{1}{6} \) und \( \frac{1}{10} \) der Velocity liegen soll. Bei der Velocity handelt 
+es sich dabei um die Geschwindigkeit der Entwicklung in einem Sprint. Sie wird oft in Form von Story Points ausgedrückt und wird vor 
+beginn des Sprints festgelegt. \cite{humanizingwork}
+
+Bei dem Zusammenstellen des Sprint Backlogs, sollte darauf geachtet werden, dass die verwendeten User Stories zusammen ein auslieferbares 
+Produkt bilden, dass am Sprintende den relevanten Stakeholders als neues Release vorgestellt werden kann. Dabei kann sich der Stakeholder 
+am Sprint Backlog orientieren, um besser einzuschätzen, ob das Resultat des Sprints seinen Erwartungen entspricht. \cite{reinscrum}
+
+\subsubsection{Vorteile und Nachteile von Requirement Engineering in Scrum}
+
+Das RE in Scrum profitiert von dem klar Strukturierten Ablaufplan für jede Iteration. So sorgt das Sprint Planning dafür, dass sich das 
+Team für ein vordefinierte Zeit nur darauf konzentriert welche User Stories  und wie diese umgesetzt werden sollen. Das erleichtert es vor 
+allem bei unerfahrenen Teams alle Mitglieder auf die gleiche Verständniseben bezüglich der Ziele des Sprints zu heben. Das Team muss sich 
+also keine Gedanken darüber machen zu versuchen das RE dynamisch in die Entwicklung einzubinden.
+
+Es ist auch vorteilhaft, dass die Stakeholder in regelmäßigen Abständen über den Fortschritt des Projekts anschaulich informiert werden und 
+dadurch die Kommunikation mit diesen erleichtert und oft klarer wird. Dank der festen Iterationsintervalle kann das Team die verwendeten 
+Methoden bei Bedarf leichter anpassen, um folgende Sprints zu verbessern. So kann z.B. die Schätzungsmethode zwischen Sprints einfach gewechselt 
+werden, wenn die aktuelle Methode nicht die geforderte Genauigkeit liefert.
+
+Weiterhin ist ein Großteil des RE auf den Product Owner ausgelagert, wodurch das restliche Team sich besser auf die Implementierung konzentrieren kann.
+
+Zwar erleichtert die feste Ablaufstruktur die Planung des RE in Scrum, allerdings macht sie es auch unflexibler. So ist es in Scrum nicht 
+vorgesehen den Sprint Backlog während der Sprintphase anzupassen, was es dem Team erschwert auf kurzfristige Änderungen zu reagieren. Dies 
+kann vor allem bei Bugs, sowie integriertem Kundensupport und Customizing zu Problemen mit Stakeholdern führen. Das liegt daran, dass in 
+diesen Kategorien sehr kurzfristig Anforderungen entstehen können, die auch eine sehr hohe Priorität aufweisen können.
+
+Weiterhin hängt der Erfolg eines Sprints stark von der Arbeit ab, die während des Sprint Plannings geleistet wurde, da die Ergebnisse aus 
+dieser Phase während eines Spints nicht mehr geändert werden sollen. Dies kann dazu führen, dass ein schwerer Fehler im Sprint Planning zum 
+Abbruch des Sprints führen kann. Ähnliches gilt auch für den Product Owner. Dieser nimmt zwar dem restlichen Team einen signifikanten Teil 
+des RE ab, hat aber entsprechend viel Verantwortung. Der Erfolg des Projekts hängt davon ab, dass er die Requirements der Stakeholder korrekt 
+analysiert und verständlich an das Team kommuniziert.
+
+\subsection{Konkrete Anwendungsmethoden für die Kontrolle von User Stories}
+
+Bei der Betrachtung der agilen Methoden, wurde in dieser Arbeit oft darauf hingewiesen, dass die verwendeten User Stories gewisse Kriterien 
+erfüllen sollten. Zu diesen Kriterien gehört z.B. dass die User Story weit genug heruntergebrochen ist, ihr Aufwand geschätzt und sie Priorisiert 
+wurde. Im Folgenden wird zu diesen Kriterien jeweils eine konkrete Methodik vorgestellt. Weiterhin wird auch noch angerissen, was eine Defnition of 
+Ready (DoR) und eine Definition of Done (DoD) im Zusammenhang mit User Stories ist.
+
+\subsubsection{Herunterbrechen von User Stories} \label{sec:breakedown}
+
+Eine Methode, um eine zu große User Story richtig herunterzubrechen, wurde von humanizing Work veröffentlicht. Dabei handelt es sich um ein Story 
+Splitting Flowchart, das von Richard Lawrence entwickelt wurde \ref{fig:breakedownt}. Diese Methode wurde hauptsächlich für Scrum entwickelt, kann aber auch 
+in anderen agilen Methoden verwendet werden. \cite{humanizingwork}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{images/HW-Story-Splitting-Flowchart-Thumbnail.jpg}
+  \caption{Flowchart zum Herunterbechen von User Stories \cite{humanizingwork}}
+    \label{fig:breakedownt}
+  \Description{}
+\end{figure}
+
+Bei Dieser Methode wird zunächst geprüft, ob die User Story das INVEST-Modell erfüllen. Sollte dies nicht der Fall sein, muss die User Story nochmal 
+überarbeitet werden. Wenn die Größe der User Story über dem vordefinierten Bereiche liegt (hier zw. \( \frac{1}{6} \) und \( \frac{1}{10} \) der Velocity), kann mit dem Herunterbrechen 
+fortgefahren werden. \cite{humanizingwork}
+
+In dem Flowchart werden dafür verschiedene Kategorien vorgeschlagen, nach denen man die User Story weiter herunterbrechen kann. Zu diesen Kategorien 
+gehören die verschiedenen Arbeitsschritte, Operationen, Buisenessregeln, Datentyparten und Schnittstellen. Weiterhin kann man sie auch nach dem größten 
+Aufwand, der Komplexität und der Entscheidung, ob nichtfunktionale Anforderungen erst später umgesetzt werden können, heruntergebrochen werden. \cite{humanizingwork}
+
+Nachdem die User Story nach einer der Kriterien heruntergebrochen wurde, werden die entstandenen Stories noch geprüft. Dabei Müssen die neuen Stories 
+unter anderem noch dem INVEST-Modell entsprechen, ungefähr den gleichen Umfang aufweisen, dieser Umfang innerhalb des vorgegebenen Bereichs liegen und 
+keiner der Stories redundant ist. Wenn alle Schritte in dem Flowchart richtig umgesetzt wurden, dann erhält man am Ende gute User Stories mit der 
+gewollten Größe. \cite{humanizingwork}
+
+\subsubsection{Aufwandschätzung von User Stories über Planning Poker mit Fibonacci-Zahlen} \label{sec:effort}
+
+Von allen User Stories muss der Aufwand geschätzt werden um zu bestimmen, ob sie dem kleinen Umfang entsprechen, der in iterativen agilen Methoden 
+benötigt wird. Eine Methode die man dazu anwenden kann, ist das Planning Poker mit Fibonacci-Zahlen. Dabei wird die Zahlenfolge als der Schätzwert verwendet. \cite{planingpoker}
+
+Sie ist besser für das Schätzen geeignet als eine lineare Folge, da die Sprünge zwischen den einzelnen Zahlen nach oben immer größer werden. So wird 
+verhindert, dass versucht wird große User Stories unrealistisch genau zu Schätzen. Das ist vorteilhaft, weil aus Beobachtungen hervorgegangen ist, dass 
+die Aufwandschätzung mit zunehmendem Umfang der User Story immer ungenauer wird. \cite{planingpoker}
+
+Das Planning Poker folgt einem festen Ablaufplan. Im ersten Schritt wird die User Story zunächst dem Team präsentiert. Daraufhin wird sie im Team diskutiert, 
+damit ein einheitliches Verständnis entsteht. Im dritten Schritt schätzt dann jedes Mitglied den Aufwand mithilfe der Fibonacci-Zahlen. Welcher Aufwand genau 
+geschätzt wird ist dem Team überlassen. Es kann z.B. die Story Points, oder die Komplexität geschätzt werden. \cite{planingpoker}
+
+Anschließend werden die Ergebnisse der Schätzungen Präsentiert und die beiden Teammitglieder mit der größten Differenz stellen die Gründe für ihre Schätzung vor. 
+Anschließend werden die Abweichungen im Team diskutiert. Wenn sich das Team in dieser Diskussion einigen kann, dann wird die Schätzung finalisiert, indem man z.B. 
+den Median oder Mittelwert aller Schätzungen bildet. Sollte allerdings keine Einigung Zustandekommen, muss das Team den Prozess wieder ab der Diskussion über die 
+User Story wiederholen. \cite{planingpoker}
+
+\subsubsection{Priorisieren von User Stories mit MoSCoW-Methode} \label{sec:priorization}
+
+User Stories müssen priorisiert werden, damit sie richtig zugewiesen und eingeplant werden können. Dabei müssen die Abhängigkeiten von User Stories untereinander 
+beachtet werden, wenn diese vorhanden sind. Für die Priorisierung kann man z.B. die MoSCoW-Methode verwenden. Dabei werden die User Stories in drei Kategorien eingeteilt. \cite{moscow}
+
+Dazu gehören als erstes die Muss-Kategorie, in die User Stories eingeordnet werden, die absolut essentiell für die Grundfunktionalität sind und ohne die das 
+Projekt nicht auskommt. In die Soll-Kategorie werden sie eingeordnet, wenn sie noch durchaus viel Wert für die Stakeholder aufweisen, aber für die Grundfunktionalität 
+des Produkts nicht essenziell sind. Diese User Stories müssen also nicht unbedingt direkt in der ersten Version umgesetzt werden. Als drittes beinhaltet die Kann-Kategorie 
+(Could) User Stories, die einen geringeren Wert für die Stakeholder haben und eher unter "Nice to have" einzuordnen sind. Die letzte Kategorie ist die Nicht-Kategorie 
+(Will not), in der die User Stories fallen, die außerhalb des Scopes liegen und höchstens in Zukünftigen Versionen von Bedeutung sein könnten. \cite{moscow}
+
+Die erfolgreiche Zuweisung der User Stories zu den entsprechenden Kategorien ist dabei stark von einer ordentlichen, vorausgehenden Aufwandschätzung abhängig. \cite{moscow}
+
+
+\subsubsection{Definition of Ready (DoR) und Definition of Done (DoD)}
+
+Damit das Team erkennt, wann eine User Story bereit für die Bearbeitung, oder fertig implementiert ist, definieren die meisten Unternehmen eine DoR und eine DoD. 
+Bei einer DoR handelt es sich dabei um eine Liste von Kategorien, die alle User Stories erfüllen muss, bevor sie für die Umsetzung freigegeben wird. der Genaue Inhalt 
+ist bei der DoR und der DoD dem Unternehmen überlassen. 
+
+In dem DoR könnten durchaus folgende Kriterien enthalten sein: das INVEST-Modell ist erfüllt, der Aufwand wurde geschätzt und ist innerhalb des vordefiniertem Bereichs, 
+die Priorisierung wurde durchgeführt, die Akzeptanzkriterien sind festgelegt und die technischen Details sind geklärt.
+
+Bei den Akzeptanzkriterien handelt es sich um die Kriterien, die eine spezifische User Story erfüllen muss, damit sie als fertig gilt. Diese sind zwischen den verschiedenen 
+User Stories durchaus unterschiedlich. Sie werden oft von Stakeholdern vorgegeben, können aber auch nichtfunktionale Anforderungen enthalten, oder von dem erfolgreichen 
+Abschluss vordefinierter Tests (z.B. Unit-Tests) abhängen.
+
+In der DoD werden die Kriterien aufgelistet, die alle User Stories erfüllen müssen, damit sie als vollständig umgesetzt gelten. Zu diesen Kategorien können unter anderem 
+folgende gehören: das Erfüllen der Akzeptanzkriterien, das Dokumentieren der Änderungen, das Bestehen alle Tests und die Abnahme durch den Product Owner oder Projektleiter.
+
 
 \subsection{Feature-driven Development}
 Im Folgenden wird erläutert, wie Epics und User Storys im Feature-driven Development (FDD) in den Arbeitsprozess integriert sind.
