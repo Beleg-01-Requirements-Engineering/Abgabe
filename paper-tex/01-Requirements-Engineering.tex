@@ -89,20 +89,6 @@ Das Konzept von \emph{Epics und User Stories} gehört zu diesen neuen Methoden u
 während bei der Anforderungsanalyse unterstützen. Im folgenden Abschnitt werden die zugrundeliegenden Definitionen
 dieses Konzeptes vorgestellt, anhand eines Beispiels verdeutlicht und die Vor- und Nachteile beleuchtet.
 
-\subsection{Definition ``Epic''}
-TODO
-\begin{itemize}
-	\item Was sind User Stories und Epics?
-	\item Unterschied zw. User Stories und klassischen Anforderungen.
-	\item Rolle der Akzeptanzkriterien.
-	\item Definition und Zweck (grobe Anforderungen, die später verfeinert werden).
-	\item Hierarchie (Epic -> User Story -> Task).
-	\item User Stories: Struktur (As a [user], I want to [goal], so that [benefit]).
-	\item User Story und Epic klar voneinander trennen, was unterscheidet sie voneinander?
-	      (Beispiel, was später fortgesetzt wird?)
-	\item Was macht gute User Story / gutes Epic aus.
-\end{itemize}
-
 \subsection{Definition ``User Story''}
 \cite[p. 4]{cohn_user_2004} beschreibt ``[e]ine \emph{User Story} [als] eine Funktionalität, welche wertvoll für einen Nutzer [...] eines Systems
 oder Software ist''.
@@ -137,6 +123,21 @@ Diese wird in der Conversation durchgeführt und gegebenenfalls dokumentiert.
 Ziel der Conversation ist es dabei die Details der Funktionalität zu klären
 und durch Akzeptanztests in der Confirmation als Spezifikation für die Implementierung
 der Funktionalität festzuhalten \cite[p. 4]{cohn_user_2004}.
+
+\subsection{Definition ``Epic''}
+Ein \emph{Epic} stellt eine Vision oder ein übergeordnetes Ziel dar.
+Es gleicht in der Formulierung der User Story, umfasst aber einen viel größeren Umfang \cite[pp. 6, 14]{cohn_user_2004}.
+Das Epic repräsentiert nämlich nicht nur eine einzelne Anforderung, sondern einen Anforderungsbereich.
+Somit bietet es dem Kunden und den Entwicklern eine Orientierungshilfe beim Formulieren der User Stories,
+ist aber selber unbrauchbar für die direkte Implementierung von Software-Features.
+
+Um den Zweck einer Vision zu erfüllen, werden Epics dementsprechend grob und allgemein formuliert.
+Sie lassen einen weiten Interprationsspielraum offen, welcher durch weitere Absprachen zwischen
+Kunde und Team, bzw. innerhalb des Entwicklerteams ausgefüllt werden müssen.
+
+Die Vorlage für die Formulierung von User Stories kann selbstverständlich auch für Epics verwendet werden.
+Dies bietet den Vorteil, dass schon die Vision aus der Perspektive des Kunden, bzw. des Stakeholders formuliert
+wird. Dies vereinfacht gegebenenfalls das spätere Formulieren von User Stories.
 
 \subsection{Beispiel}
 Um das Konzept der \emph{Epics und User Stories} besser zu verdeutlichen, wurden alle Beispiele in diesem
