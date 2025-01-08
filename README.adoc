@@ -15,3 +15,12 @@ Belegarbeit im Rahmen des Moduls "Software Engineering"
 - link:presentation[Quellverzeichnis für die Präsentation]
 
 == Abstract
+In dieser Arbeit wurde der Einsatz und die Wirkung von Epics und User Stories in der agilen Softwareentwicklung untersucht.
+Dazu wurden mithilfe bestehender Literatur drei agile Vorgehensmodelle und die beim Einsatz von Epics und User Stories
+auftretenden Herausforderungen betrachtet.
+Für die Herausforderungen wurden jeweils mögliche Lösungsvorschläge gefunden, welche anhand von kurzen Beispielen
+in dieser Arbeit beschrieben wurden.
+
+Im Verlauf der Recherche sind die Autoren zu dem Schluss gekommen, dass Epics und User Stories ein hilfreiches Werkzeug
+für das Requirements Engineering sind. Insbesondere für die agile Softwareentwicklung ist dieses Konzept besser geeignet als traditionelle
+Methoden.
