@@ -7,24 +7,22 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-        with:
-          sparse-checkout: paper-tex
       - name: Compile PDF with Makefile in `paper-tex` directory
         uses: xu-cheng/texlive-action@v2
         with:
           scheme: full
           run: |
             apk add make
-            cd paper-tex
+            cd ./paper-tex
             make all
-      - name: Move generated paper PDF to repository root
-        run: mv paper-tex/01-Requirements-Engineering.pdf .
+      - name: Copy generated paper PDF to repository root
+        run: cp ./paper-tex/01-Requirements-Engineering.pdf .
       - name: Cache compiled paper PDF
         uses: actions/cache@v4
         env:
           cache-name: cache-paper-pdf
         with:
-          path: 01-Requirements-Engineering.pdf
+          path: ./01-Requirements-Engineering.pdf
           key: ${{ runner.os }}-paper-pdf
   Commit-PDF:
     runs-on: ubuntu-latest
@@ -35,11 +33,11 @@ jobs:
       - name: Get previously built paper PDF
         uses: actions/cache@v4
         with:
-          path: 01-Requirements-Engineering.pdf
+          path: ./01-Requirements-Engineering.pdf
           key: ${{ runner.os }}-paper-pdf
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.1.4
         with:
-          add: "01-Requirements-Engineering.pdf"
+          add: "./01-Requirements-Engineering.pdf"
           default_author: github_actions
           message: Add paper PDF built with GitHub Actions
