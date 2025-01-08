@@ -82,15 +82,15 @@ Somit gehört das Requirements Engineering zu den größten Herausforderungen in
 Eine intensive Einbeziehung aller Personen oder Institutionen, die ein Interesse an der Software haben, direkt beteiligt oder von deren Nutzung betroffen sind, ist unerlässlich. Diese Personen oder Institutionen werden \emph{Stakeholder} genannt \cite{balzert09}.
 
 \subsection{Funktionale und nichtfunktionale Anforderungen}
-Häufig wird zwischen zwei Arten von Anforderungen unterschieden: funktionale und nichtfunktionale Anforderungen. In \cite{sommerville16} werden diese folgendermaßen definiert:
+Häufig wird zwischen zwei Arten von Anforderungen unterschieden: Funktionale und nichtfunktionale Anforderungen. In \cite{sommerville16} werden diese folgendermaßen definiert:
 
-\emph{Funktionale Anforderungen} definieren, welche Dienste und Funktionen die Software bereitstellen soll. Sie beziehen sich häufig auf konkrete Nutzeranforderungen, wie die Reaktion auf bestimmte Eingaben oder das gewünschte Verhalten in einer konkreten Situation.
+\emph{Funktionale Anforderungen} legen fest, welche Dienste und Funktionen die Software bereitstellen soll. Sie beziehen sich häufig auf konkrete Nutzeranforderungen, wie die Reaktion auf bestimmte Eingaben oder das gewünschte Verhalten in einer konkreten Situation.
 Ein einfaches Beispiel ist:
 \begin{quote}
 Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.
 \end{quote}
 
-\emph{Nichtfunktionale Anforderungen} beziehen sich hingegen meist auf übergreifende Eigenschaften des Softwaresystem oder auf mehrere seiner Funktionen. Dazu zählen Aspekte wie Zuverlässigkeit, Verfügbarkeit, Informationssicherheit und Performance. Besonders bei Echtzeitsystemen spielt bspw. die Antwortzeit eine kritisch Rolle. Darüber hinaus können nichtfunktionale Anforderungen auch Einschränkungen umfassen, z.B. dass für eine Schnittstelle ein bestimmtes Datenformat eingehalten werden muss.
+\emph{Nichtfunktionale Anforderungen} beziehen sich hingegen meist auf übergreifende Eigenschaften des Softwaresystems oder auf mehrere seiner Funktionen. Dazu zählen Aspekte wie Zuverlässigkeit, Verfügbarkeit, Informationssicherheit und Performance. Besonders bei Echtzeitsystemen spielt bspw. die Antwortzeit eine kritisch Rolle. Darüber hinaus können nichtfunktionale Anforderungen auch Einschränkungen umfassen, z.B. dass für eine Schnittstelle ein bestimmtes Datenformat eingehalten werden muss.
 
 Da sich Anforderungen häufig überschneiden, gegenseitig beeinflussen oder voneinander abgeleitet werden, können nicht alle Anforderungen eindeutig eine der beiden Kategorien zugeordnet werden. Die Anforderung ``Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.'' beschreibt eine konkrete Funktion (Benutzeranmeldung), kann dabei aber zusätzlich nichtfunktionale Anforderungen beinhalten, wie z.B. eine kurze Antwortzeit oder hohe Sicherheitsstandards für die Verarbeitung der Anmeldedaten.
 
@@ -100,7 +100,7 @@ Bei der agile Softwareentwicklung, auf die sich dieser Artikel vorrangig konzent
 Um schneller funktionsfähige Software bereitzustellen und flexibel auf Änderungen der Anforderungen reagieren zu können, wird in der agilen Entwicklung in der Regel auf eine detaillierte, vollständige  Anforderungsspezifikation verzichtet.
 Stattdessen wechseln sich die Phasen des Requirements Engineerings und der Implementierung iterativ ab, sodass Spezifikation und Implementierung direkt ineinander greifen.
 
-Das Requirements Engineering erfolgt entwicklungsbegleitend, wobei die Stakeholder fortlaufend einbezogen werden. Auf diese Weise wird eine kontinuierliche Überprüfung und Anpassung der Anforderungen sichergestellt.
+Das Requirements Engineering erfolgt daher entwicklungsbegleitend, wobei die Stakeholder fortlaufend einbezogen werden. Auf diese Weise wird eine kontinuierliche Überprüfung und Anpassung der Anforderungen sichergestellt.
 Dadurch können Änderungen schnell berücksichtigt und potenzielle Missverständnisse frühzeitig erkannt und mit geringerem Aufwand behoben werden.
 
 % Grafik fehlt noch
@@ -383,39 +383,41 @@ Ein Beispiel für ein solches Feature ist:
 \end{quote}
 
 Diese prägnante Formulierung hat den Vorteil, dass sie die Verständlichkeit für den Kunden und andere Stakeholder erleichtert.
-
 Die Entwicklungszeit eines Features ist auf wenige Stunden bis maximal zwei Wochen beschränkt.
+
 FDD eignet sich besonders gut für große Softwareprojekte mit vielen Entwickler, welche dann in verschiedene Teams aufgeteilt werden.
 Zusätzlich zu den Entwicklungsteams wird ein Planungsteam gebildet, welches aus erfahrenen Softwarearchitekten und Domainexperten besteht.
 
-FDD folgt einem klar strukturierten Prozess, der in fünf Phasen gegliedert ist. Diese Phasen lassen sich in zwei Bereiche einteilen: die Aufgaben des Planungsteams und die der Entwicklungsteams.
+FDD folgt dabei einem klar strukturierten Prozess, der in fünf Phasen gegliedert ist. Diese Phasen lassen sich in zwei Bereiche einteilen: die Aufgaben des Planungsteams und die der Entwicklungsteams. Das Vorgehen wird in \cite{coad99} folgendermaßen beschrieben:
 
 Zunächst wird ein Objektmodell der Software entwickelt (\emph{Phase 1: Develope an Overall Model}).
 Anschließend wird eine Liste von Features erstellt (\emph{Phase 2: Build a Feature List}).
 Darauf aufbauend wird für jedes Feature ein Entwicklungsplan erstellt (\emph{Phase 3: Plan by Feature}).
-Anschließend werden jedem Entwicklungsteam ein oder mehrere Features zugeordnet.
-Die Teams erarbeitet zunächst ein Design-Paket für die jeweiligen Features (\emph{Phase 4: Design by Feature}), anschließend erfolgt die Implementierung (\emph{Phase 5: Build by Feature}).\cite{coad99}
+Jedem Entwicklungsteam werden dann ein oder mehrere Features zugeordnet.
+Die Teams erarbeitet zunächst ein Design-Paket für die jeweiligen Features (\emph{Phase 4: Design by Feature}),
+anschließend erfolgt die Implementierung (\emph{Phase 5: Build by Feature}).
 
-Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren  \cite{hunt06}.
+Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren.
+
 % Graphik fehlt noch
 
 \subsubsection{Feature vs. User Story}
 
 Sowohl Features als auch User Stories dienen dazu, Anforderungen in überschaubare Teilprobleme zu zerlegen, welche einen konkreten Nutzen für den Anwender haben. Beide sind so formuliert, dass sie für den Kunden und andere Stakeholder verständlich bleiben.
 
-Trotz dieser Gemeinsamkeiten gibt es wesentliche Unterschiede zwischen beiden Konzepten:
+Trotz dieser Gemeinsamkeiten gibt es wesentliche Unterschiede zwischen den beiden Konzepten:
 Bereits die unterschiedliche Formulierung zeigt, dass User Stories stärker aus der Sicht des Kunden beschrieben werden, während Features sich primär auf die funktionale Umsetzung konzentrieren.
 
 Ein weiterer Unterschied ist die Vorgabe der Entwicklungszeit.
 Bei Features steht die Planbarkeit im Vordergrund, welche durch die Vorgabe von wenigen Stunden bis max. 2 Wochen Entwicklungszeit sichergestellt wird.
-In \cite{palmer02} wird zudem betont, dass ein Feature nicht nur eine triviale Accessor-Methode sein sollte, die lediglich einen Attributwert zurückgibt.
+In \cite{palmer02} wird zudem betont, dass ein Feature nicht nur eine triviale Methode sein sollte, die lediglich einen Attributwert zurückgibt.
 Bei User Stories ist es hingegen durchaus zulässig, auch kleinere Einheiten zu definieren, wie bereits in einigen Beispielen gezeigt wurde.
 
 Weiterhin unterscheidet sich auch die Einbindung in den Entwicklungsprozess. 
-Während Objekte und Klassen aus User Stories abgeleitet werden können, werden Features typischerweise aus der bestehenden Softwarearchitektur bzw. dem Ablaufmodell abgeleitet \cite{palmer02}.
+Während User Stories unter anderem dazu dienen, Objekte und Klassen zu identifizieren, werden Features im Kontext von FDD typischerweise aus der bereits bestehenden Softwarearchitektur bzw. dem Ablaufmodell abgeleitet \cite{palmer02}.
 Dadurch sind User Stories im Entwicklungsprozess vor Features einzuordnen.
 
-Features und User Stories lassen sich also nicht miteinander vergleichen, während eine User Story ein oder mehrere Features umfassen kann, kann ein einzelnen Feature auch in mehreren User Stories vorkommen\cite{coad99}.
+Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features umfassen, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen\cite{coad99}.
 
 % Beispiel fehlt noch
 
