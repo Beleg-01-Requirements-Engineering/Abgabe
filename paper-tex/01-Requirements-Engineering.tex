@@ -1,8 +1,8 @@
 \documentclass[acmtog]{acmart}
 \usepackage[ngerman, english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
 
 \copyrightyear{2024}
 \acmYear{2024}
@@ -51,13 +51,11 @@
 
 \renewcommand{\shortauthors}{Pohl, Schmiedel and Swiridoff}
 
-
 \begin{abstract}
 	In dieser Arbeit wurde der Einsatz und die Wirkung von Epics und User Stories in der agilen Softwareentwicklung untersucht.
-	Dazu wurden mithilfe bestehender Literatur drei agile Vorgehensmodelle und die beim Einsatz von Epics und User Stories
+	Dazu wurden drei agile Vorgehensmodelle und die beim Einsatz von Epics und User Stories
 	auftretenden Herausforderungen betrachtet.
-	Für die Herausforderungen wurden jeweils mögliche Lösungsvorschläge gefunden, welche anhand von kurzen Beispielen
-	in dieser Arbeit beschrieben wurden.
+	Für die Herausforderungen wurden jeweils mögliche Lösungsvorschläge gefunden und anhand von kurzen Beispielen beschrieben.
 
 	Im Verlauf der Recherche sind die Autoren zu dem Schluss gekommen, dass Epics und User Stories ein hilfreiches Werkzeug
 	für das Requirements Engineering sind. Insbesondere für die agile Softwareentwicklung ist dieses Konzept besser geeignet als traditionelle
@@ -65,6 +63,26 @@
 \end{abstract}
 
 \maketitle
+
+\section{Einleitung und Motivation}
+Moderne Softwareprojekte sind häufig geprägt von großer Komplexität.
+Zunehmend dynamischen Rahmenbedingungen haben dazu geführt, dass traditionelle Entwicklungsansätze oft nicht mehr ausreichen.
+Insbesondere mangelnde Flexibilität und unklare Spezifikationen können zu erheblichen Verzögerungen oder sogar zum Scheitern eines Projekts führen.
+Als Reaktion darauf wurden in den letzten Jahrzehnten verschiedene agile Methoden entwickelt, die unter anderem eine schnellere Reaktion auf geänderte Anforderungen ermöglichen sollen.
+
+In der agilen Softwareentwicklung werden häufig Epics und User Stories verwendet, um Anforderungen zu beschreiben und zu strukturieren.
+% Epics dienen der Beschreibung übergeordneter Anforderungen, während User Stories ``kleinere'' Anforderungen klar und prägnant aus der Perspektive des Anwenders formulieren.
+Die Verwendung von Epics und User Stories bringt dabei Herausforderungen mit sich, wie z.B. die sinnvolle Abgrenzung von Anforderungen, die richtige Detailtiefe, eine angemessene Priorisierung und die Aufwandsschätzung.
+
+Ziel dieser Arbeit ist es, den Einsatz von Epics und User Stories im agilen Requirements Engineering zu untersuchen. Dabei werden typische Herausforderungen thematisiert und geeignete Lösungsansätze vorgestellt.
+
+Diese Arbeit ist folgendermaßen strukturiert:
+Kapitel 2 gibt einen Überblick über die Grundlagen des Requirements Engineerings.
+Anschließend wird in Kapitel 3 das Konzept von User Stories und Epics vorgestellt und anhand eines Beispiels verdeutlicht.
+In Kapitel 4 wird die automatische Verarbeitung von User Stories mit Hilfe von Cucumber erläutert.
+Danach werden in Kapitel 5 konkrete agile Vorgehensmodelle und deren Umgang mit Anforderungen vorgestellt.
+In Kapitel 6 werden die Vorteile und Risiken bei der Anwendung von User Stories diskutiert.
+Abschließend werden in Kapitel 7 die wichtigsten Erkenntnisse zusammengefasst.
 
 \section{Grundlagen Requirements Engineering}
 
@@ -339,8 +357,6 @@ Das hier vorgestellte Beispiel und der zugehörige Quellcode sind online auf Git
 		cucumber-example}}.
 Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 
-
-\section{Agile Vorgehensmodelle}
 
 \section{Agile Vorgehensmodelle}
 
