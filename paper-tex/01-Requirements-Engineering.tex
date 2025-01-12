@@ -2,7 +2,7 @@
 \usepackage[ngerman, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+%\usepackage{lmodern}
 
 \copyrightyear{2024}
 \acmYear{2024}
@@ -19,10 +19,13 @@
 
 \usepackage[cache=false]{minted}
 \setminted{
-    breaklines=true,
+    % breaklines=true,
     frame=single,
 }
 \usepackage[minted, most]{tcolorbox}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, arrows.meta, positioning}
 
 
 \begin{document}
@@ -116,7 +119,7 @@ Bei der agile Softwareentwicklung, auf die sich dieser Artikel vorrangig konzent
 Um schneller funktionsfähige Software bereitzustellen und flexibel auf Änderungen der Anforderungen reagieren zu können, wird in der agilen Entwicklung in der Regel auf eine detaillierte, vollständige  Anforderungsspezifikation verzichtet.
 Stattdessen wechseln sich die Phasen des Requirements Engineerings und der Implementierung iterativ ab, sodass Spezifikation und Implementierung direkt ineinander greifen (siehe Abb. \ref{fig:development}).
 
-Das Requirements Engineering erfolgt daher entwicklungsbegleitend, wobei die Stakeholder fortlaufend einbezogen werden. Auf diese Weise wird eine kontinuierliche Überprüfung und Anpassung der Anforderungen sichergestellt.
+Das Requirements Engineering erfolgt daher entwicklungsbegleitend, wobei die Stakeholder fortlaufend einbezogen werden \cite{sommerville16}. Auf diese Weise wird eine kontinuierliche Überprüfung und Anpassung der Anforderungen sichergestellt.
 So können Änderungen schnell berücksichtigt und potenzielle Missverständnisse frühzeitig erkannt und mit geringerem Aufwand behoben werden.
 
 \begin{figure}[t]
@@ -607,13 +610,12 @@ Ein Beispiel für ein solches Feature ist:
 	\texttt{Verwalte die Informationen des Kurses.}
 \end{quote}
 
-Diese prägnante Formulierung hat den Vorteil, dass sie die Verständlichkeit für den Kunden und andere Stakeholder erleichtert.
 Die Entwicklungszeit eines Features ist auf wenige Stunden bis maximal zwei Wochen beschränkt.
 
-FDD eignet sich besonders gut für große Softwareprojekte mit vielen Entwickler, welche dann in verschiedene Teams aufgeteilt werden.
+FDD eignet sich besonders gut für große Softwareprojekte mit vielen Entwickler, welche in verschiedene Teams aufgeteilt werden.
 Zusätzlich zu den Entwicklungsteams wird ein Planungsteam gebildet, welches aus erfahrenen Softwarearchitekten und Domainexperten besteht.
 
-FDD folgt dabei einem klar strukturierten Prozess, der in fünf Phasen gegliedert ist. Diese Phasen lassen sich in zwei Bereiche einteilen: die Aufgaben des Planungsteams und die der Entwicklungsteams. Das Vorgehen wird in \cite{coad99} folgendermaßen beschrieben:
+FDD folgt dabei einem klar strukturierten Prozess, der in fünf Phasen gegliedert ist (siehe Abb. \ref{fig:fdd}). Diese Phasen lassen sich in zwei Bereiche einteilen: die Aufgaben des Planungsteams und die der Entwicklungsteams. Das Vorgehen wird in \cite{coad99} folgendermaßen beschrieben:
 
 Zunächst wird ein Objektmodell der Software entwickelt (\emph{Phase 1: Develope an Overall Model}).
 Anschließend wird eine Liste von Features erstellt (\emph{Phase 2: Build a Feature List}).
@@ -622,29 +624,59 @@ Jedem Entwicklungsteam werden dann ein oder mehrere Features zugeordnet.
 Die Teams erarbeitet zunächst ein Design-Paket für die jeweiligen Features (\emph{Phase 4: Design by Feature}),
 anschließend erfolgt die Implementierung (\emph{Phase 5: Build by Feature}).
 
-Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{images/fdd.png}
+  \caption{Feature-driven Development}
+    \label{fig:fdd}
+  \Description{}
+\end{figure}
 
-% Graphik fehlt noch
+Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren.
 
 \subsubsection{Feature vs. User Story}
 
 Sowohl Features als auch User Stories dienen dazu, Anforderungen in überschaubare Teilprobleme zu zerlegen, welche einen konkreten Nutzen für den Anwender haben. Beide sind so formuliert, dass sie für den Kunden und andere Stakeholder verständlich bleiben.
 
-Trotz dieser Gemeinsamkeiten gibt es wesentliche Unterschiede zwischen den beiden Konzepten:
-Bereits die unterschiedliche Formulierung zeigt, dass User Stories stärker aus der Sicht des Kunden beschrieben werden, während Features sich primär auf die funktionale Umsetzung konzentrieren.
+Trotz dieser Gemeinsamkeiten gibt es wesentliche Unterschiede zwischen den beiden Konzepten.
+Bereits die unterschiedliche Formulierung zeigt, dass User Stories aus der Sicht des Anwenders formuliert werden, während Features sich primär auf die funktionale Umsetzung konzentrieren.
 
 Ein weiterer Unterschied ist die Vorgabe der Entwicklungszeit.
 Bei Features steht die Planbarkeit im Vordergrund, welche durch die Vorgabe von wenigen Stunden bis max. 2 Wochen Entwicklungszeit sichergestellt wird.
-In \cite{palmer02} wird zudem betont, dass ein Feature nicht nur eine triviale Methode sein sollte, die lediglich einen Attributwert zurückgibt.
+In \cite{palmer02} wird zudem betont, dass ein Feature nicht nur eine triviale Methode ist, die lediglich einen Attributwert zurückgibt.
 Bei User Stories ist es hingegen durchaus zulässig, auch kleinere Einheiten zu definieren, wie bereits in einigen Beispielen gezeigt wurde.
 
 Weiterhin unterscheidet sich auch die Einbindung in den Entwicklungsprozess.
 Während User Stories unter anderem dazu dienen, Objekte und Klassen zu identifizieren, werden Features im Kontext von FDD typischerweise aus der bereits bestehenden Softwarearchitektur bzw. dem Ablaufmodell abgeleitet \cite{palmer02}.
-Dadurch sind User Stories im Entwicklungsprozess vor Features einzuordnen.
 
-Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features umfassen, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen\cite{coad99}.
+Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features enthalten, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen \cite{palmer02}. Zur Demonstration soll das folgende Beispiel genügen:\smallskip
 
-% Beispiel fehlt noch
+\begin{tikzpicture}[
+    every node/.style={draw, rectangle, font=\footnotesize}]
+\node (us1) [text width=13.2em] {
+  \texttt{Als \underline{Studierender} möchte ich \underline{mich}\\
+  \underline{für einen Kurs registrieren}, damit\\
+  \underline{mir die Teilnahme angerechnet wird}.}
+};
+\node (f1) [right=4em of us1, text width=6.5em] {
+  \texttt{Validiere\\
+  die Anmeldungen\\
+  für einen Kurs.}
+};
+\node (us2) [below=1em of us1, text width=13.2em] {
+  \texttt{Als \underline{Professor} möchte ich \underline{die}\\
+  \underline{Kursinformationen verändern können},\\
+  damit \underline{sie richtig sind}.}
+};
+\node (f2) [right=4em of us2, text width=6.5em] {
+  \texttt{Aktualisiere\\
+  die Informationen\\
+  eines Kurses}.
+};
+\draw [-] (us1.east) -- (f1.west);
+\draw [-] (us1.east) -- (f2.west);
+\draw [-] (us2.east) -- (f2.west);
+\end{tikzpicture}
 
 \subsubsection{Rolle von User Stories und Epics in FDD}
 
