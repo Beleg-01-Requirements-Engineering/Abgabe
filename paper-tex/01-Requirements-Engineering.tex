@@ -632,7 +632,7 @@ anschließend erfolgt die Implementierung (\emph{Phase 5: Build by Feature}).
   \Description{}
 \end{figure}
 
-Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren.
+Dieses strukturierte, inkrementelle Vorgehen soll ermöglichen, regelmäßig sichtbaren Fortschritt zu liefern, ohne die Prozesse dabei unnötig zu verkomplizieren \cite{hunt06}.
 
 \subsubsection{Feature vs. User Story}
 
@@ -642,14 +642,14 @@ Trotz dieser Gemeinsamkeiten gibt es wesentliche Unterschiede zwischen den beide
 Bereits die unterschiedliche Formulierung zeigt, dass User Stories aus der Sicht des Anwenders formuliert werden, während Features sich primär auf die funktionale Umsetzung konzentrieren.
 
 Ein weiterer Unterschied ist die Vorgabe der Entwicklungszeit.
-Bei Features steht die Planbarkeit im Vordergrund, welche durch die Vorgabe von wenigen Stunden bis max. 2 Wochen Entwicklungszeit sichergestellt wird.
+Bei Features steht die Planbarkeit im Vordergrund \cite{hunt06}, welche durch die Vorgabe von wenigen Stunden bis max. 2 Wochen Entwicklungszeit sichergestellt wird.
 In \cite{palmer02} wird zudem betont, dass ein Feature nicht nur eine triviale Methode ist, die lediglich einen Attributwert zurückgibt.
 Bei User Stories ist es hingegen durchaus zulässig, auch kleinere Einheiten zu definieren, wie bereits in einigen Beispielen gezeigt wurde.
 
 Weiterhin unterscheidet sich auch die Einbindung in den Entwicklungsprozess.
 Während User Stories unter anderem dazu dienen, Objekte und Klassen zu identifizieren, werden Features im Kontext von FDD typischerweise aus der bereits bestehenden Softwarearchitektur bzw. dem Ablaufmodell abgeleitet \cite{palmer02}.
 
-Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features enthalten, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen \cite{palmer02}. Zur Demonstration soll das folgende Beispiel genügen:\smallskip
+Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features enthalten, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen \cite{hunt06}. Zur Demonstration soll das folgende Beispiel genügen:\smallskip
 
 \begin{tikzpicture}[
     every node/.style={draw, rectangle, font=\footnotesize}]
@@ -681,33 +681,57 @@ Features und User Stories lassen sich also nicht miteinander vergleichen. Eine U
 \subsubsection{Rolle von User Stories und Epics in FDD}
 
 Im Gegensatz zu Kanban und Scrum basiert das Konzept des Feature-driven Developments nicht grundlegend auf Epics und User Stories.
-Dennoch können sie  in Phase 1 bei der Modellierung des Gesamtmodells hilfreich sein.
-In den späteren Phase können sie zudem das Identifizieren von Features unterstützen.
+Dennoch können sie in Phase 1 bei der Modellierung des Gesamtmodells hilfreich sein.
+In den späteren Phase können sie zudem das Identifizieren von Features unterstützen \cite{hunt06}.
 Obwohl die Kommunikation in FDD überwiegend auf Features ausgerichtet ist, bieten User Stories eine nützliche Ergänzung bei der Kommunikation zwischen dem Planungsteam und den Entwicklungsteams sowie zwischen dem Planungsteam und dem Kunden.
 Besonders in der Zusammenarbeit mit Stakeholdern sind User Stories hilfreich, da sie die Perspektive des Anwenders stärker in den Vordergrund rücken.
-Zudem können sie bspw. in der Dokumentation eines Domain-Walkthroughs eingesetzt werden.
+Zudem können sie bspw. in der Dokumentation eines Domain-Walkthroughs eingesetzt werden \cite{palmer02}.
 
-Epics und User Stories übernehmen in FDD üblicherweise nicht die Rolle der Priorisierung und Planung - diese wird durch Features abgedeckt. Stattdessen dienen sie als zusätzliches Hilfsmittel für die Modellierung und zur Verbesserung der Kommunikation. Diese Rolle sollte allerdings nicht unterschätzt werden, da eine klare und effiziente Kommunikation zwischen dem Planungsteam und den Entwicklungsteams in FDD von entscheidender Bedeutung ist.
+Epics und User Stories übernehmen in FDD üblicherweise nicht die Rolle der Priorisierung und Planung - diese wird durch Features abgedeckt. Stattdessen dienen sie als zusätzliches Hilfsmittel für die Modellierung, Dokumentation und Kommunikation. Diese Rolle sollte allerdings nicht unterschätzt werden, da eine klare und effiziente Kommunikation zwischen dem Planungsteam und den Entwicklungsteams in FDD von entscheidender Bedeutung ist.
 
 Zusammenfassend lässt sich festhalten, dass User Stories und Epics zwar keine zentrale Rolle in FDD einnehmen, aber eine wertvolle Ergänzung darstellen können.
 
 \section{Diskussion}
 
 \begin{itemize}
-	\item Vorteile? Nutzen?
-	\item Risiken?
-	\item Probleme bei der Anwendung von User Stories und Epics: unklare Anforderungen, Gefahr der Über- oder Unterpriorisierung.
-	\item aufzeigen wie User Story und Epic helfen um agil arbeiten zu können
+\item Effekt User Stories
+  \begin{itemize}
+  \item sorgen für klare Kommunikation mit dem Kunden
+  \item ermöglichen Strukturieren und Priorisieren der Projekt-Requirements
+  \item Verständnis der Perspektive des Stakeholders
+  \item kleine Arbeitspakete für die Umsetzung in agilen Modellen
+  \end{itemize}
+\item Beachte
+  \begin{itemize}
+  \item nichtfunktionale Anforderungen sind schwierig als User Story abzubilden
+  \item Gefahr der Überspezialisierung auf einen spezifischen Stakeholder (oft Kunden)
+  \item Kompatibilität der einzelnen User Stories untereinander
+  \end{itemize}
+\item bei Beachtung der INVEST-Richtlinien tragen User Stories maßgeblich zum Erfolg von agilen Projekten bei
 \end{itemize}
 
-\section{Zusammenfassung und Ausblick}
+\section{Zusammenfassung}
 
 \begin{itemize}
-	\item Zusammenfassung: User Stories und Epics als Mittel zur Förderung von effektiver Kommunikation und Anpassungsfähigkeit.
-	\item Ausblick:
-	      \begin{itemize}
-		      \item Potenziale durch KI-gestützte Tools zur automatischen Erstellung oder Analyse von User Stories.
-	      \end{itemize}
+\item Definition und Qualitätsmerkmale von Epics und User Stories
+  \begin{itemize}
+  \item INVEST-Modell
+  \item Akzeptanzkriterien
+  \item DoR und DoD
+  \end{itemize}
+\item Anwendung von User Stories in verschiedenen agilen Modellen und damit einhergehenden Herausforderungen
+  \begin{itemize}
+  \item Kanban
+  \item Scrum
+  \item FDD
+  \end{itemize}
+\item Einige Anwendungsmethoden und Tools für den richtigen Umgang mit User Stories
+  \begin{itemize}
+  \item ``How to Split a User Story'': humanizing Work
+  \item Planning Poker mit Fibonacci-Zahlen
+  \item MoSCoW-Methode
+  \item Cucumber
+  \end{itemize}
 \end{itemize}
 
 
