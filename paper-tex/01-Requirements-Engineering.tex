@@ -1,8 +1,8 @@
 \documentclass[acmtog]{acmart}
 \usepackage[ngerman, english]{babel}
 \usepackage[utf8]{inputenc}
-%\usepackage[T1]{fontenc}
-%\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 
 \copyrightyear{2024}
 \acmYear{2024}
@@ -87,12 +87,17 @@ Abschließend werden in Kapitel 7 die wichtigsten Erkenntnisse zusammengefasst.
 \section{Grundlagen Requirements Engineering}
 
 \subsection{Definition und Einordnung}
-Die \emph{Anforderungen} (engl. \textit{requirements}) an ein Softwaresystem beschreiben, welche Eigenschaften von der Software erwartet werden \cite{sommerville16}. Dabei kann es sich um Benutzeranforderungen oder auch Systemanforderungen handeln \cite{sommerville16}.
+Die \emph{Anforderungen} (engl. \textit{requirements}) an ein Softwaresystem beschreiben, welche Eigenschaften von der Software erwartet werden \cite{sommerville16}.
+% Dabei kann es sich z.B. um Benutzeranforderungen aber auch Systemanforderungen handeln.
+Ein einfaches Beispiel ist:
+\begin{quote}
+Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.
+\end{quote}
 
 Der Prozess, um solche Anforderungen ``zu ermitteln, zu spezifizieren, zu analysieren, zu validieren und daraus eine fachliche Lösung abzuleiten'', wird als \emph{Requirements Engineering} (\emph{RE}) bezeichnet \cite{balzert09}.
 Das Ziel dieses Prozesses ist neben der Erarbeitung einer Anforderungsspezifikation die Qualität der Software und die Kundenzufriedenheit sicherzustellen.
 
-Das Requirements Engineering gilt als besonders kritisch, da es einerseits eine der komplexesten Teilbereiche des Software Engineerings darstellt und andererseits maßgeblich den Erfolg eines Softwareprojekts beeinflusst \cite{balzert09}.
+Das Requirements Engineering gilt dabei als besonders kritisch, da es einerseits eine der komplexesten Teilbereiche des Software Engineerings darstellt und andererseits maßgeblich den Erfolg eines Softwareprojekts beeinflusst \cite{balzert09}.
 Somit gehört das Requirements Engineering zu den größten Herausforderungen in der Softwareentwicklung.
 
 Eine intensive Einbeziehung aller Personen oder Institutionen, die ein Interesse an der Software haben, direkt beteiligt oder von deren Nutzung betroffen sind, ist unerlässlich. Diese Personen oder Institutionen werden \emph{Stakeholder} genannt \cite{balzert09}.
@@ -101,25 +106,26 @@ Eine intensive Einbeziehung aller Personen oder Institutionen, die ein Interesse
 Häufig wird zwischen zwei Arten von Anforderungen unterschieden: Funktionale und nichtfunktionale Anforderungen. In \cite{sommerville16} werden diese folgendermaßen definiert:
 
 \emph{Funktionale Anforderungen} legen fest, welche Dienste und Funktionen die Software bereitstellen soll. Sie beziehen sich häufig auf konkrete Nutzeranforderungen, wie die Reaktion auf bestimmte Eingaben oder das gewünschte Verhalten in einer konkreten Situation.
-Ein einfaches Beispiel ist:
-\begin{quote}
-	Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.
-\end{quote}
 
-\emph{Nichtfunktionale Anforderungen} beziehen sich hingegen meist auf übergreifende Eigenschaften des Softwaresystems oder auf mehrere seiner Funktionen. Dazu zählen Aspekte wie Zuverlässigkeit, Verfügbarkeit, Informationssicherheit und Performance. Besonders bei Echtzeitsystemen spielt bspw. die Antwortzeit eine kritisch Rolle. Darüber hinaus können nichtfunktionale Anforderungen auch Einschränkungen umfassen, z.B. dass für eine Schnittstelle ein bestimmtes Datenformat eingehalten werden muss.
+\emph{Nichtfunktionale Anforderungen} beziehen sich meist auf übergreifende Eigenschaften der Software oder auf mehrere Funktionen gleichzeitig. Dazu zählen Aspekte wie Zuverlässigkeit, Verfügbarkeit, Informationssicherheit und Antwortzeit. Dabei können nichtfunktionale Anforderungen auch Einschränkungen umfassen, z.B. dass für eine Schnittstelle ein bestimmtes Datenformat eingehalten werden muss.
 
-Da sich Anforderungen häufig überschneiden, gegenseitig beeinflussen oder voneinander abgeleitet werden, können nicht alle Anforderungen eindeutig eine der beiden Kategorien zugeordnet werden. Die Anforderung ``Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.'' beschreibt eine konkrete Funktion (Benutzeranmeldung), kann dabei aber zusätzlich nichtfunktionale Anforderungen beinhalten, wie z.B. eine kurze Antwortzeit oder hohe Sicherheitsstandards für die Verarbeitung der Anmeldedaten.
+Da sich Anforderungen häufig überschneiden, gegenseitig beeinflussen oder voneinander abgeleitet werden, können nicht alle Anforderungen eindeutig eine der beiden Kategorien zugeordnet werden. Die Anforderung ``Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.'' beschreibt zwar eine konkrete Funktion (Benutzeranmeldung), kann dabei aber zusätzlich nichtfunktionale Anforderungen beinhalten, wie z.B. eine kurze Antwortzeit oder hohe Sicherheitsstandards für die Verarbeitung der Anmeldedaten.
 
 \subsection{Requirements Engineering in der agilen Entwicklung}
 Bei der agile Softwareentwicklung, auf die sich dieser Artikel vorrangig konzentriert, gibt es wesentliche Unterschiede im Vergleich zur traditionellen bzw. plangesteuerten Softwareentwicklung.
-
 Um schneller funktionsfähige Software bereitzustellen und flexibel auf Änderungen der Anforderungen reagieren zu können, wird in der agilen Entwicklung in der Regel auf eine detaillierte, vollständige  Anforderungsspezifikation verzichtet.
-Stattdessen wechseln sich die Phasen des Requirements Engineerings und der Implementierung iterativ ab, sodass Spezifikation und Implementierung direkt ineinander greifen.
+Stattdessen wechseln sich die Phasen des Requirements Engineerings und der Implementierung iterativ ab, sodass Spezifikation und Implementierung direkt ineinander greifen (siehe Abb. \ref{fig:development}).
 
 Das Requirements Engineering erfolgt daher entwicklungsbegleitend, wobei die Stakeholder fortlaufend einbezogen werden. Auf diese Weise wird eine kontinuierliche Überprüfung und Anpassung der Anforderungen sichergestellt.
-Dadurch können Änderungen schnell berücksichtigt und potenzielle Missverständnisse frühzeitig erkannt und mit geringerem Aufwand behoben werden.
+So können Änderungen schnell berücksichtigt und potenzielle Missverständnisse frühzeitig erkannt und mit geringerem Aufwand behoben werden.
 
-% Grafik fehlt noch
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{images/plandriven-and-agil-development.png}
+  \caption{Traditionelle und agile Softwareentwicklung \cite{sommerville16}}
+    \label{fig:development}
+  \Description{}
+\end{figure}
 
 \section{Epics und User Stories}
 Wie dem \emph{Agile Manifesto} \cite{beedle_principles_2001} festgehalten, muss eine agile Softwareentwicklung
