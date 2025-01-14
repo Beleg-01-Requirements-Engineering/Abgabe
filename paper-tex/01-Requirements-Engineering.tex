@@ -511,90 +511,6 @@ Abbruch des Sprints führen kann. Ähnliches gilt auch für den \emph{Product Ow
 des \emph{RE} ab, hat aber entsprechend viel Verantwortung. Der Erfolg des Projekts hängt davon ab, dass er die Requirements der Stakeholder korrekt 
 analysiert und verständlich an das Team kommuniziert.
 
-\subsection{Konkrete Anwendungsmethoden für die Kontrolle von User Stories}
-
-Bei der Betrachtung der agilen Methoden, wurde in dieser Arbeit oft darauf hingewiesen, dass die verwendeten User Stories gewisse Kriterien 
-erfüllen sollten. Zu diesen Kriterien gehört z.B. dass die User Story weit genug heruntergebrochen ist, ihr Aufwand geschätzt und sie Priorisiert 
-wurde. Im Folgenden wird zu diesen Kriterien jeweils eine konkrete Methodik vorgestellt. Weiterhin wird auch noch angerissen, was eine \emph{Defnition of 
-Ready}  (\emph{DoR}) und eine \emph{Definition of Done} (\emph{DoD}) im Zusammenhang mit User Stories ist.
-
-\subsubsection{Herunterbrechen von User Stories} \label{sec:breakedown}
-
-Eine Methode, um eine zu große User Story richtig herunterzubrechen, wurde von \emph{humanizing Work} veröffentlicht. Dabei handelt es sich um ein Story 
-Splitting Flowchart, das von Richard Lawrence entwickelt wurde. Diese Methode wurde hauptsächlich für Scrum entwickelt, kann aber auch 
-in anderen agilen Methoden verwendet werden. \cite{humanizingwork}
-
-Bei Dieser Methode wird zunächst geprüft, ob die User Story das \emph{INVEST}-Modell erfüllt. Sollte dies nicht der Fall sein, muss die User Story nochmal 
-überarbeitet werden. Wenn der geschätzte Aufwand der User Story über dem vordefinierten Bereich liegt (hier zw. \( \frac{1}{6} \) und \( \frac{1}{10} \) der \emph{Velocity}), kann mit dem Herunterbrechen 
-fortgefahren werden. \cite{humanizingwork}
-
-In dem Flowchart werden dafür verschiedene Kategorien erläutert, nach denen man die User Story weiter herunterbrechen kann. Zu diesen Kategorien 
-gehören die verschiedenen Arbeitsschritte, genutze Operationen, Buisenessregeln, verwendete Datentypen und Schnittstellen. Weiterhin kann man sie auch nach dem größten 
-Aufwand, der Komplexität und der Entscheidung, ob nichtfunktionale Anforderungen erst später umgesetzt werden können, heruntergebrechen. \cite{humanizingwork}
-
-Nach dem Herunterbrechen über einer der Kriterien, werden die entstandenen User Stories noch evaluiert. Dabei wird geprüft, ob sie
-unter anderem noch dem \emph{INVEST}-Model entsprechen, ungefähr den gleichen Aufwand aufweisen, dieser innerhalb des vorgegebenen Bereichs liegt und 
-keiner der User Stories redundant ist. Wenn alle Schritte in dem Flowchart richtig umgesetzt wurden, dann erhält man am Ende gute User Stories mit der 
-gewünschten Größe. \cite{humanizingwork}
-
-\subsubsection{Aufwandschätzung von User Stories über Planning Poker mit Fibonacci-Zahlen} \label{sec:effort}
-
-Von allen User Stories muss der Aufwand geschätzt werden um zu bestimmen, ob ihr Umfang sich für das verwendete Projektmodell eignet. 
-Eine Methode die man dazu anwenden kann, ist das Planning Poker mit Fibonacci-Zahlen. Dabei wird die Zahlenfolge als der Schätzwert verwendet. \cite{planingpoker}
-
-Sie ist besser für das Schätzen geeignet als eine lineare Zahlenfolge, da die Sprünge zwischen den einzelnen Zahlen nach oben immer größer werden. So kann man 
-verhindern, dass versucht wird große User Stories unrealistisch genau zu Schätzen. Das ist vorteilhaft, weil aus Beobachtungen hervorgegangen ist, dass 
-die Aufwandschätzung mit zunehmendem Umfang der User Story immer ungenauer wird. \cite{planingpoker}
-
-Das Planning Poker folgt einem festen Ablaufplan. Im ersten Schritt wird die User Story zunächst dem Team präsentiert. Daraufhin wird sie im Team diskutiert, 
-damit ein einheitliches Verständnis entsteht. Im dritten Schritt schätzt dann jedes Mitglied den Aufwand mithilfe der Fibonacci-Zahlen. Welcher Aufwand genau 
-geschätzt wird, ist dem Team überlassen. Es können z.B. die Story Points, oder die Komplexität der User Story geschätzt werden. \cite{planingpoker}
-
-Anschließend werden die Ergebnisse der Schätzungen Präsentiert und die Teammitglieder mit der größten Differenz stellen die Gründe für ihre Schätzung vor. 
-Daraufhin werden die Abweichungen im Team diskutiert. Dabei wird versucht einen gemeinsamen Kompromiss zu finden. Wenn sich das Team in der Diskussion einigen kann, dann wird die Schätzung finalisiert. 
-Dafür kann man z.B. den Median oder Mittelwert aller Schätzungen bilden. Die verwendete Methode bleibt dabei dem Team überlassen. Sollte sich das Team nicht einigen können, muss der Prozess wiederholt werden. \cite{planingpoker}
-
-\subsubsection{Priorisieren von User Stories mit MoSCoW-Methode} \label{sec:priorization}
-
-User Stories müssen priorisiert werden, damit sie richtig zugewiesen und eingeplant werden können. Dabei müssen die Abhängigkeiten von User Stories untereinander 
-beachtet werden, wenn diese vorhanden sind. Für die Priorisierung kann man z.B. die \emph{MoSCoW}-Methode verwenden. Dabei werden die User Stories in vier Kategorien eingeteilt. \cite{moscow}
-
-Dazu gehören als erstes die \emph{Muss}-Kategorie (\emph{Must}). In diese werden User Stories eingeordnet, die absolut essentiell für die Grundfunktionalität sind und ohne die das 
-Projekt nicht auskommt. In die \emph{Soll}-Kategorie (\emph{Should}) kommen User Stories, die noch durchaus viel Wert für die Stakeholder aufweisen, aber nicht unmittelbar zur Grundfunktionalität 
-des Produkts gehören und somit nicht unbedingt direkt in der ersten Version umgesetzt werden müssen. Als drittes gibt es die \emph{Kann}-Kategorie (\emph{Could}). Die User Stories in dieser Kategorie sind oft 
-noch relativ nützlich, haben aber für den Stakeholder eine eher geringeren Wert und werden oft eher als \emph{"Nice to have"} bezeichnet. Die letzte Kategorie ist die \emph{Nicht}-Kategorie 
-(\emph{Will not}). In diese fallen die User Stories, die außerhalb des Scopes liegen und höchstens in Zukünftigen Versionen von Bedeutung sein könnten. \cite{moscow}
-
-Die erfolgreiche Zuweisung der User Stories zu den entsprechenden Kategorien ist dabei stark von einer ordentlichen, vorausgehenden Aufwandschätzung abhängig. \cite{moscow}
-
-
-\subsubsection{Definition of Ready und Definition of Done}
-
-Damit das Team erkennt, wann eine User Story bereit für die Bearbeitung, oder fertig implementiert ist, definieren die meisten Unternehmen eine \emph{DoR} und eine \emph{DoD}. 
-Bei einer \emph{DoR} handelt es sich dabei um eine Liste von Kategorien, die alle User Stories erfüllen müssen, bevor sie für die Umsetzung freigegeben wird. der Genaue Inhalt 
-ist bei der \emph{DoR} und der \emph{DoD} dem Unternehmen überlassen. In dem \emph{DoR} könnten durchaus folgende Kriterien enthalten sein: 
-\begin{itemize}
-  \item das INVEST-Modell ist erfüllt
-  \item der Aufwand wurde geschätzt und ist innerhalb des vordefiniertem Bereichs
-  \item die Priorisierung wurde durchgeführt
-  \item die Akzeptanzkriterien sind festgelegt
-  \item die technischen Details sind geklärt
-\end{itemize}
-
-Die Akzeptanzkriterien (auch \emph{Confirmation} genannt) sind zwischen den verschiedenen User Stories durchaus unterschiedlich. 
-Sie werden oft von Stakeholdern vorgegeben, können aber auch nichtfunktionale Anforderungen enthalten, oder von dem erfolgreichen 
-Abschluss vordefinierter Tests (z.B. Unit-Tests) abhängen.
-
-In der \emph{DoD} werden die Kriterien aufgelistet, die alle User Stories erfüllen müssen, damit sie als vollständig umgesetzt gelten. Zu diesen Kategorien können unter anderem 
-folgende gehören: 
-\begin{itemize}
-  \item das Erfüllen der Akzeptanzkriterien
-  \item das Dokumentieren der Änderungen
-  \item der erfolgreiche Abschluss aller Tests
-  \item die Abnahme durch den Product Owner oder Projektleiter
-\end{itemize}
-
-
 \subsection{Feature-driven Development}
 Im Folgenden wird erläutert, wie Epics und User Storys im Feature-driven Development (FDD) in den Arbeitsprozess integriert sind.
 
@@ -694,6 +610,89 @@ Zudem können sie bspw. in der Dokumentation eines Domain-Walkthroughs eingesetz
 Epics und User Stories übernehmen in FDD üblicherweise nicht die Rolle der Priorisierung und Planung - diese wird durch Features abgedeckt. Stattdessen dienen sie als zusätzliches Hilfsmittel für die Modellierung, Dokumentation und Kommunikation. Diese Rolle sollte allerdings nicht unterschätzt werden, da eine klare und effiziente Kommunikation zwischen dem Planungsteam und den Entwicklungsteams in FDD von entscheidender Bedeutung ist.
 
 Zusammenfassend lässt sich festhalten, dass User Stories und Epics zwar keine zentrale Rolle in FDD einnehmen, aber eine wertvolle Ergänzung darstellen können.
+
+\section{Konkrete Anwendungsmethoden für die Kontrolle von User Stories}
+
+Bei der Betrachtung der agilen Methoden, wurde in dieser Arbeit oft darauf hingewiesen, dass die verwendeten User Stories gewisse Kriterien 
+erfüllen sollten. Zu diesen Kriterien gehört z.B. dass die User Story weit genug heruntergebrochen ist, ihr Aufwand geschätzt und sie Priorisiert 
+wurde. Im Folgenden wird zu diesen Kriterien jeweils eine konkrete Methodik vorgestellt. Weiterhin wird auch noch angerissen, was eine \emph{Defnition of 
+Ready}  (\emph{DoR}) und eine \emph{Definition of Done} (\emph{DoD}) im Zusammenhang mit User Stories ist.
+
+\subsection{Herunterbrechen von User Stories} \label{sec:breakedown}
+
+Eine Methode, um eine zu große User Story richtig herunterzubrechen, wurde von \emph{humanizing Work} veröffentlicht. Dabei handelt es sich um ein Story 
+Splitting Flowchart, das von Richard Lawrence entwickelt wurde. Diese Methode wurde hauptsächlich für Scrum entwickelt, kann aber auch 
+in anderen agilen Methoden verwendet werden. \cite{humanizingwork}
+
+Bei Dieser Methode wird zunächst geprüft, ob die User Story das \emph{INVEST}-Modell erfüllt. Sollte dies nicht der Fall sein, muss die User Story nochmal 
+überarbeitet werden. Wenn der geschätzte Aufwand der User Story über dem vordefinierten Bereich liegt (hier zw. \( \frac{1}{6} \) und \( \frac{1}{10} \) der \emph{Velocity}), kann mit dem Herunterbrechen 
+fortgefahren werden. \cite{humanizingwork}
+
+In dem Flowchart werden dafür verschiedene Kategorien erläutert, nach denen man die User Story weiter herunterbrechen kann. Zu diesen Kategorien 
+gehören die verschiedenen Arbeitsschritte, genutze Operationen, Buisenessregeln, verwendete Datentypen und Schnittstellen. Weiterhin kann man sie auch nach dem größten 
+Aufwand, der Komplexität und der Entscheidung, ob nichtfunktionale Anforderungen erst später umgesetzt werden können, heruntergebrechen. \cite{humanizingwork}
+
+Nach dem Herunterbrechen über einer der Kriterien, werden die entstandenen User Stories noch evaluiert. Dabei wird geprüft, ob sie
+unter anderem noch dem \emph{INVEST}-Model entsprechen, ungefähr den gleichen Aufwand aufweisen, dieser innerhalb des vorgegebenen Bereichs liegt und 
+keiner der User Stories redundant ist. Wenn alle Schritte in dem Flowchart richtig umgesetzt wurden, dann erhält man am Ende gute User Stories mit der 
+gewünschten Größe. \cite{humanizingwork}
+
+\subsection{Aufwandschätzung von User Stories über Planning Poker mit Fibonacci-Zahlen} \label{sec:effort}
+
+Von allen User Stories muss der Aufwand geschätzt werden um zu bestimmen, ob ihr Umfang sich für das verwendete Projektmodell eignet. 
+Eine Methode die man dazu anwenden kann, ist das Planning Poker mit Fibonacci-Zahlen. Dabei wird die Zahlenfolge als der Schätzwert verwendet. \cite{planingpoker}
+
+Sie ist besser für das Schätzen geeignet als eine lineare Zahlenfolge, da die Sprünge zwischen den einzelnen Zahlen nach oben immer größer werden. So kann man 
+verhindern, dass versucht wird große User Stories unrealistisch genau zu Schätzen. Das ist vorteilhaft, weil aus Beobachtungen hervorgegangen ist, dass 
+die Aufwandschätzung mit zunehmendem Umfang der User Story immer ungenauer wird. \cite{planingpoker}
+
+Das Planning Poker folgt einem festen Ablaufplan. Im ersten Schritt wird die User Story zunächst dem Team präsentiert. Daraufhin wird sie im Team diskutiert, 
+damit ein einheitliches Verständnis entsteht. Im dritten Schritt schätzt dann jedes Mitglied den Aufwand mithilfe der Fibonacci-Zahlen. Welcher Aufwand genau 
+geschätzt wird, ist dem Team überlassen. Es können z.B. die Story Points, oder die Komplexität der User Story geschätzt werden. \cite{planingpoker}
+
+Anschließend werden die Ergebnisse der Schätzungen Präsentiert und die Teammitglieder mit der größten Differenz stellen die Gründe für ihre Schätzung vor. 
+Daraufhin werden die Abweichungen im Team diskutiert. Dabei wird versucht einen gemeinsamen Kompromiss zu finden. Wenn sich das Team in der Diskussion einigen kann, dann wird die Schätzung finalisiert. 
+Dafür kann man z.B. den Median oder Mittelwert aller Schätzungen bilden. Die verwendete Methode bleibt dabei dem Team überlassen. Sollte sich das Team nicht einigen können, muss der Prozess wiederholt werden. \cite{planingpoker}
+
+\subsection{Priorisieren von User Stories mit MoSCoW-Methode} \label{sec:priorization}
+
+User Stories müssen priorisiert werden, damit sie richtig zugewiesen und eingeplant werden können. Dabei müssen die Abhängigkeiten von User Stories untereinander 
+beachtet werden, wenn diese vorhanden sind. Für die Priorisierung kann man z.B. die \emph{MoSCoW}-Methode verwenden. Dabei werden die User Stories in vier Kategorien eingeteilt. \cite{moscow}
+
+Dazu gehören als erstes die \emph{Muss}-Kategorie (\emph{Must}). In diese werden User Stories eingeordnet, die absolut essentiell für die Grundfunktionalität sind und ohne die das 
+Projekt nicht auskommt. In die \emph{Soll}-Kategorie (\emph{Should}) kommen User Stories, die noch durchaus viel Wert für die Stakeholder aufweisen, aber nicht unmittelbar zur Grundfunktionalität 
+des Produkts gehören und somit nicht unbedingt direkt in der ersten Version umgesetzt werden müssen. Als drittes gibt es die \emph{Kann}-Kategorie (\emph{Could}). Die User Stories in dieser Kategorie sind oft 
+noch relativ nützlich, haben aber für den Stakeholder eine eher geringeren Wert und werden oft eher als \emph{"Nice to have"} bezeichnet. Die letzte Kategorie ist die \emph{Nicht}-Kategorie 
+(\emph{Will not}). In diese fallen die User Stories, die außerhalb des Scopes liegen und höchstens in Zukünftigen Versionen von Bedeutung sein könnten. \cite{moscow}
+
+Die erfolgreiche Zuweisung der User Stories zu den entsprechenden Kategorien ist dabei stark von einer ordentlichen, vorausgehenden Aufwandschätzung abhängig. \cite{moscow}
+
+
+\subsection{Definition of Ready und Definition of Done}
+
+Damit das Team erkennt, wann eine User Story bereit für die Bearbeitung, oder fertig implementiert ist, definieren die meisten Unternehmen eine \emph{DoR} und eine \emph{DoD}. 
+Bei einer \emph{DoR} handelt es sich dabei um eine Liste von Kategorien, die alle User Stories erfüllen müssen, bevor sie für die Umsetzung freigegeben wird. der Genaue Inhalt 
+ist bei der \emph{DoR} und der \emph{DoD} dem Unternehmen überlassen. In dem \emph{DoR} könnten durchaus folgende Kriterien enthalten sein: 
+\begin{itemize}
+  \item das INVEST-Modell ist erfüllt
+  \item der Aufwand wurde geschätzt und ist innerhalb des vordefiniertem Bereichs
+  \item die Priorisierung wurde durchgeführt
+  \item die Akzeptanzkriterien sind festgelegt
+  \item die technischen Details sind geklärt
+\end{itemize}
+
+Die Akzeptanzkriterien (auch \emph{Confirmation} genannt) sind zwischen den verschiedenen User Stories durchaus unterschiedlich. 
+Sie werden oft von Stakeholdern vorgegeben, können aber auch nichtfunktionale Anforderungen enthalten, oder von dem erfolgreichen 
+Abschluss vordefinierter Tests (z.B. Unit-Tests) abhängen.
+
+In der \emph{DoD} werden die Kriterien aufgelistet, die alle User Stories erfüllen müssen, damit sie als vollständig umgesetzt gelten. Zu diesen Kategorien können unter anderem 
+folgende gehören: 
+\begin{itemize}
+  \item das Erfüllen der Akzeptanzkriterien
+  \item das Dokumentieren der Änderungen
+  \item der erfolgreiche Abschluss aller Tests
+  \item die Abnahme durch den Product Owner oder Projektleiter
+\end{itemize}
 
 \section{Diskussion}
 
