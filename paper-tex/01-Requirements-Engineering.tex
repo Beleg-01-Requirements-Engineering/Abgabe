@@ -23,6 +23,7 @@
     frame=single,
 }
 \usepackage[minted, most]{tcolorbox}
+\usepackage{float}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows, arrows.meta, positioning}
@@ -338,11 +339,21 @@ Scenario: <Card der User Story>
 
 Wie dieses Schema für die oben genannte User Story umgesetzt werden kann ist in Listing \ref{listing:1} zu sehen.
 
-\begin{listing}[!ht]
-	\inputminted{cucumber}{cucumber/course_modification.feature}
-	%\vspace*{-1em}
-	\caption{\texttt{course\_modification.feature}}
-	\label{listing:1}
+\begin{listing}[H]
+  \begin{minted}[
+      breaklines=true,
+      breakanywhere=true,
+      tabsize=2
+  ]{cucumber}
+  Feature: As a professor, I want to modify a course.
+  
+  Scenario: As a professor, I want to modify a course's information so that it is correct.
+      Given a course with name "Software Enginearing"
+      When the professor modifies the name of the course to "Software Engineering"
+      Then the name of the course is "Software Engineering"
+  \end{minted}
+  \caption{\texttt{course\_modification.feature}}
+\label{listing:1}
 \end{listing}
 
 Um basierend auf solch einer Feature-Datei nun automatisierte Tests durchzuführen, müssen für die einzelnen Testabschnitte
