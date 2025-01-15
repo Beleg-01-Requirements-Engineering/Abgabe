@@ -76,17 +76,17 @@ In der agilen Softwareentwicklung werden häufig Epics und User Stories verwende
 % Epics dienen der Beschreibung übergeordneter Anforderungen, während User Stories ``kleinere'' Anforderungen klar und prägnant aus der Perspektive des Anwenders formulieren.
 Die Verwendung von Epics und User Stories bringt dabei Herausforderungen mit sich, wie z.B. die sinnvolle Abgrenzung von Anforderungen, die richtige Detailtiefe, eine angemessene Priorisierung und die Aufwandsschätzung.
 
-Ziel dieser Arbeit ist es, den Einsatz von Epics und User Stories im agilen Requirements Engineering zu untersuchen. Dabei werden typische Herausforderungen thematisiert und geeignete Lösungsansätze vorgestellt.
+Ziel dieser Arbeit ist es, den Einsatz von Epics und User Stories im agilen Requirements Engineering zu untersuchen. Dabei werden die Wirkung auf das agile Entwicklungsumfeld analysiert, typische Herausforderungen thematisiert und geeignete Lösungsansätze vorgestellt.
 
 Diese Arbeit ist folgendermaßen strukturiert:
-Kapitel 2 gibt einen Überblick über die Grundlagen des Requirements Engineerings.
-Anschließend wird in Kapitel 3 das Konzept von User Stories und Epics vorgestellt und anhand eines Beispiels verdeutlicht.
-In Kapitel 4 wird die automatische Verarbeitung von User Stories mit Hilfe von Cucumber erläutert.
-Danach werden in Kapitel 5 konkrete agile Vorgehensmodelle und deren Umgang mit Anforderungen vorgestellt.
-In Kapitel 6 werden die Vorteile und Risiken bei der Anwendung von User Stories diskutiert.
-Abschließend werden in Kapitel 7 die wichtigsten Erkenntnisse zusammengefasst.
+Kapitel \ref{sec:requirements-engineering} gibt einen Überblick über die Grundlagen des Requirements Engineerings.
+Anschließend wird in Kapitel \ref{def:epics_user_stories} das Konzept von User Stories und Epics vorgestellt und durch ein Beispiel veranschaulicht.
+Kapitel \ref{sec:agile-vorgehensmodelle} widmet sich konkreten agilen Vorgehensmodellen und deren Umgang mit User Stories und Epics.
+In Kapitel \ref{konkrete-anwendungsmethoden} werden verschiedene Methoden für den Umgang mit User Stories beschrieben, darunter Methoden zum Herunterbrechen, zur Aufwandsschätzung, zur Priorisierung und zur automatischen Verarbeitung mit Hilfe von Cucumber.
+Kapitel \ref{sec:diskussion} diskutiert, wie Epics und User Stories die Prinzipien des agilen Manifests unterstützen, wobei Vorteile und Risiken behandelt werden.
+Abschließend werden in Kapitel \ref{sec:zusammenfassung} die wichtigsten Erkenntnisse zusammengefasst.
 
-\section{Grundlagen Requirements Engineering}
+\section{Grundlagen Requirements Engineering} \label{sec:requirements-engineering}
 
 \subsection{Definition und Einordnung}
 Die \emph{Anforderungen} (engl. \textit{requirements}) an ein Softwaresystem beschreiben, welche Eigenschaften von der Software erwartet werden \cite{sommerville16}.
@@ -305,7 +305,7 @@ In der Praxis bleibt ausgehend von dieser Definition aber die Frage offen, welch
 
 
 
-\section{Agile Vorgehensmodelle}
+\section{Agile Vorgehensmodelle} \label{sec:agile-vorgehensmodelle}
 
 \emph{RE} und die Verwendung von User Stories und Epics wird in verschiedenen Projektmanagementmethoden unterschiedlich gehandhabt. Im Folgenden werden
 diese Aspekte in den agilen Modellen Kanban, Scrum und Feature Driven Developement betrachtet und die Vorgehensweisen bewertet. Dabei wird auch auf die Unterschiede eingegangen.
@@ -549,7 +549,7 @@ Epics und User Stories übernehmen in FDD üblicherweise nicht die Rolle der Pri
 
 Zusammenfassend lässt sich festhalten, dass User Stories und Epics zwar keine zentrale Rolle in FDD einnehmen, aber eine wertvolle Ergänzung darstellen können.
 
-\section{Konkrete Anwendungsmethoden für die Kontrolle von User Stories}
+\section{Konkrete Anwendungsmethoden für die Kontrolle von User Stories} \label{konkrete-anwendungsmethoden}
 
 Bei der Betrachtung der agilen Methoden, wurde in dieser Arbeit oft darauf hingewiesen, dass die verwendeten User Stories gewisse Kriterien
 erfüllen sollten. Zu diesen Kriterien gehört z.B. dass die User Story weit genug heruntergebrochen ist, ihr Aufwand geschätzt und sie Priorisiert
@@ -698,7 +698,7 @@ Das hier vorgestellte Beispiel und der zugehörige Quellcode sind online auf Git
 Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 
 
-\section{Diskussion}
+\section{Diskussion} \label{sec:diskussion}
 % In diesem Kapitel werden nun nocheinmal die wichtigsten Erkenntnisse dieser Arbeit zusammengetragen.
 % Dabei sei zu beachten, dass insbesondere die Auswahl und Bewertung der Erkenntnisse zunächst als Meinung
 % der Autoren betrachtet werden sollte. Diese findet zwar ihren Ursprung selbstverständlich in den Ergebnissen der Recherche,
@@ -749,7 +749,7 @@ Dies kann insbesondere beim Schätzen und Herunterbrechen von User Stories zu Ef
 in unerfahrenen Teams führen. Ein einfaches Mittel dem entgegenzuwirken ist Teammitglieder mit unterschiedlichen
 Erfahrungsstufen zusammenzustellen und einen aktiven Wissenstransfer anzuregen.
 
-\section{Zusammenfassung}
+\section{Zusammenfassung} \label{sec:zusammenfassung}
 Im Rahmen dieser Arbeit wurden Epics und User Stories als Methode des agilen Requirement Engineering vorgestellt.
 
 Der korrekte Umgang mit User Stories wurde theoretisch anhand des INVEST-Modells erörtert und exemplarisch
