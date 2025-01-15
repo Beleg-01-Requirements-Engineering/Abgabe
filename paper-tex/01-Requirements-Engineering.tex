@@ -115,7 +115,7 @@ Häufig wird zwischen zwei Arten von Anforderungen unterschieden: Funktionale un
 Da sich Anforderungen häufig überschneiden, gegenseitig beeinflussen oder voneinander abgeleitet werden, können nicht alle Anforderungen eindeutig eine der beiden Kategorien zugeordnet werden. Die Anforderung ``Der Benutzer muss sich mit seiner E-Mail-Adresse und einem Passwort anmelden können.'' beschreibt zwar eine konkrete Funktion (Benutzeranmeldung), kann dabei aber zusätzlich nichtfunktionale Anforderungen beinhalten, wie z.B. eine kurze Antwortzeit oder hohe Sicherheitsstandards für die Verarbeitung der Anmeldedaten.
 
 \subsection{Requirements Engineering in der agilen Entwicklung}
-Bei der agile Softwareentwicklung, auf die sich dieser Artikel vorrangig konzentriert, gibt es wesentliche Unterschiede im Vergleich zur traditionellen bzw. plangesteuerten Softwareentwicklung.
+Bei der agilen Softwareentwicklung, auf die sich dieser Artikel vorrangig konzentriert, gibt es wesentliche Unterschiede im Vergleich zur traditionellen bzw. plangesteuerten Softwareentwicklung.
 Um schneller funktionsfähige Software bereitzustellen und flexibel auf Änderungen der Anforderungen reagieren zu können, wird in der agilen Entwicklung in der Regel auf eine detaillierte, vollständige  Anforderungsspezifikation verzichtet.
 Stattdessen wechseln sich die Phasen des Requirements Engineerings und der Implementierung iterativ ab, sodass Spezifikation und Implementierung direkt ineinander greifen (siehe Abb. \ref{fig:development}).
 
@@ -175,7 +175,7 @@ Auf der Card wird in wenigen Sätzen die in der User Story transportierte Anford
 Dabei sei hervorgehoben, dass die Card nicht etwa als vollständige Spezifikation für die geforderte Funktionalität dient,
 sondern lediglich als Erinnerung und Grundlage für spätere Diskussion.
 Diese wird in der Conversation durchgeführt und gegebenenfalls dokumentiert.
-Ziel der Conversation ist es dabei die Details der Funktionalität zu klären
+Ziel der Conversation ist es dabei, die Details der Funktionalität zu klären
 und durch Akzeptanztests in der Confirmation als Spezifikation für die Implementierung
 der Funktionalität festzuhalten \cite[p. 4]{cohn_user_2004}.
 
@@ -189,8 +189,8 @@ Somit bietet es dem Kunden und den Entwicklern eine Orientierungshilfe beim Form
 ist aber selber unbrauchbar für die direkte Implementierung von Software-Features.
 
 Um den Zweck einer Vision zu erfüllen, werden Epics dementsprechend grob und allgemein formuliert.
-Sie lassen einen weiten Interprationsspielraum offen, welcher durch weitere Absprachen zwischen
-Kunde und Team, bzw. innerhalb des Entwicklerteams ausgefüllt werden müssen.
+Sie lassen einen weiten Interpretationsspielraum offen, welcher durch weitere Absprachen zwischen
+Kunde und Team bzw. innerhalb des Entwicklerteams ausgefüllt werden müssen.
 
 Die Vorlage für die Formulierung von User Stories kann selbstverständlich auch für Epics verwendet werden.
 Dies bietet den Vorteil, dass schon die Vision aus der Perspektive des Kunden, bzw. des Stakeholders formuliert
@@ -199,7 +199,7 @@ wird. Dies vereinfacht gegebenenfalls das spätere Formulieren von User Stories.
 \subsection{Beispiel}
 Um das Konzept der \emph{Epics und User Stories} besser zu verdeutlichen, wurden alle Beispiele in diesem
 Artikel für ein imaginäres Kursverwaltungssystem erstellt.
-Dieses System soll Mitgliedern einer Hochschule die digitalen Verwaltung von Kursen und deren zugehörigen Informationen
+Dieses System soll Mitgliedern einer Hochschule die digitale Verwaltung von Kursen und deren zugehörigen Informationen
 und Prüfungen ermöglichen.
 Außerdem sollen Studierende in der Lage sein, sich zu Kursen, bzw. Prüfungen an- und abzumelden.
 
@@ -231,7 +231,7 @@ Einige Fragen, welche das Epic noch offen lässt sind zum Beispiel:
 \end{itemize}
 
 Die Antworten auf diese Fragen stellen weitere Anforderungen an das System dar.
-Diese werden wiederum als User Stories formuliert und weiterverarbeit.
+Diese werden wiederum als User Stories formuliert und weiterverarbeitet.
 Selbstverständlich können auch hier nocheinmal User Stories entstehen, welche
 zu generell sind und deshalb weitere Verfeinerung benötigen.
 Tatsächlich handelt es sich dann um ein weiteres Epic, welches wiederum durch den
@@ -241,7 +241,7 @@ aufgeteilt werden dürfen \cite[p. 6]{cohn_user_2004}.
 Wie in der Definition erwähnt gehört zu einer User Story neben der \emph{Card}, der Formulierung,
 auch die \emph{Conversation}, in welcher die Details der User Story geklärt werden.
 Die Absicht User Stories so spezifisch wie möglich zu formulieren würde hier nur zu überflüssiger
-Redundanz führen, welche schlussendlich die Effizienz des Entwicklungsteam senkt.
+Redundanz führen, welche schlussendlich die Effizienz des Entwicklungsteams senkt.
 
 Anhand dieser Überlegungen sind folgende zwei User Stories als Verfeinerung des oben genannten Epics verfasst:
 
@@ -262,7 +262,7 @@ nämlich eine Web-, Desktop- oder Mobile-Anwendung zu entwickeln, korrekt gewese
 Das Epic lässt die Interpretation von \emph{digital} offen.
 
 Aus diesem Grund wird in vielen Fällen für die Spezialisierung des Epics weitere Kommunikation
-mit dem Kunden des System von Nöten sein.
+mit dem Kunden des Systems von Nöten sein.
 Meist kann nur dieser die korrekte Interpretation der Anforderung liefern.
 
 Wie und ob diese Kommunikation stattfindet ist allerdings Sache des (agilen) Vorgehensmodells, welches
@@ -280,7 +280,7 @@ zu formulieren.
 
 So könnten in Zukunft noch weitere User Stories hinzukommen, die das Epic im Bezug auf die dritte
 Frage spezialisieren.
-Zum Beispiel könnte eine weitere User Story die eine mögliche Interaktion der Studierenden beschreiben:
+Zum Beispiel könnte eine weitere User Story eine mögliche Interaktion der Studierenden beschreiben:
 
 \vspace{1em}
 \texttt{Als \underline{Studierender} möchte ich \underline{mich für die Teilnahme }\\
@@ -301,9 +301,8 @@ In der Praxis bleibt ausgehend von dieser Definition aber die Frage offen, welch
 	\item[Valuable:] Eine gute User Story stellt einen Mehrwert für den Kunden dar.
 	\item[Estimatable:] Der Aufwand einer guten User Story ist schätzbar.
 	\item[Small:] Eine gute User Story ist klein und umfasst nur eine einzelne Anforderung, welche in kurzer Zeit implementiert werden kann.
-	\item[Testable:] Die Erfüllung einer guten User Story ist prüfbar sein.
+	\item[Testable:] Die Erfüllung einer guten User Story ist prüfbar.
 \end{description}
-
 
 
 \section{Agile Vorgehensmodelle} \label{sec:agile-vorgehensmodelle}
@@ -450,13 +449,13 @@ des \emph{RE} ab, hat aber entsprechend viel Verantwortung. Der Erfolg des Proje
 analysiert und verständlich an das Team kommuniziert.
 
 \subsection{Feature Driven Development}
-Im Folgenden wird erläutert, wie Epics und User Storys im Feature Driven Development (FDD) in den Arbeitsprozess integriert sind.
+Im Folgenden wird erläutert, wie Epics und User Stories im Feature Driven Development (FDD) in den Arbeitsprozess integriert sind.
 
 \subsubsection{Überblick über FDD}
 Das Konzept des Feature Driven Development wurde erstmals in Kapitel 6 von \cite{coad99} beschrieben.
 Im Zentrum dieses Ansatzes steht dabei der Begriff des \emph{Feature}, das dort als ``small client-valued functionality'' definiert wird, also eine Funktionalität, die einen konkreten Nutzen für den Kunden oder Anwender hat.
 
-Ein Feature wird in der folgende Form beschrieben:
+Ein Feature wird in der folgenden Form beschrieben:
 
 \begin{quote}
 	\texttt{<Aktion>\hspace{5ex}<Ergebnis>\hspace{5ex}<Objekt>}
@@ -475,7 +474,7 @@ Zusätzlich zu den Entwicklungsteams wird ein Planungsteam gebildet, welches aus
 
 FDD folgt dabei einem klar strukturierten Prozess, der in fünf Phasen gegliedert ist (siehe Abb. \ref{fig:fdd}). Diese Phasen lassen sich in zwei Bereiche einteilen: die Aufgaben des Planungsteams und die der Entwicklungsteams. Das Vorgehen wird in \cite{coad99} folgendermaßen beschrieben:
 
-Zunächst wird ein Objektmodell der Software entwickelt (\emph{Phase 1: Develope an Overall Model}).
+Zunächst wird ein Objektmodell der Software entwickelt (\emph{Phase 1: Develop an Overall Model}).
 Anschließend wird eine Liste von Features erstellt (\emph{Phase 2: Build a Feature List}).
 Darauf aufbauend wird für jedes Feature ein Entwicklungsplan erstellt (\emph{Phase 3: Plan by Feature}).
 Jedem Entwicklungsteam werden dann ein oder mehrere Features zugeordnet.
@@ -507,7 +506,7 @@ Bei User Stories ist es hingegen durchaus zulässig, auch kleinere Einheiten zu 
 Weiterhin unterscheidet sich auch die Einbindung in den Entwicklungsprozess.
 Während User Stories unter anderem dazu dienen, Objekte und Klassen zu identifizieren, werden Features im Kontext von FDD typischerweise aus der bereits bestehenden Softwarearchitektur bzw. dem Ablaufmodell abgeleitet \cite{palmer02}.
 
-Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features enthalten, ein einzelnen Feature kann aber auch in mehreren User Stories vorkommen \cite{hunt06}. Zur Demonstration soll das folgende Beispiel genügen:\smallskip
+Features und User Stories lassen sich also nicht miteinander vergleichen. Eine User Story kann ein oder mehrere Features enthalten, ein einzelnes Feature kann aber auch in mehreren User Stories vorkommen \cite{hunt06}. Zur Demonstration soll das folgende Beispiel genügen:\smallskip
 
 \begin{tikzpicture}[
 		every node/.style={draw, rectangle, font=\footnotesize}]
@@ -540,7 +539,7 @@ Features und User Stories lassen sich also nicht miteinander vergleichen. Eine U
 
 Im Gegensatz zu Kanban und Scrum basiert das Konzept des Feature Driven Developments nicht grundlegend auf Epics und User Stories.
 Dennoch können sie in Phase 1 bei der Modellierung des Gesamtmodells hilfreich sein.
-In den späteren Phase können sie zudem das Identifizieren von Features unterstützen \cite{hunt06}.
+In den späteren Phasen können sie zudem das Identifizieren von Features unterstützen \cite{hunt06}.
 Obwohl die Kommunikation in FDD überwiegend auf Features ausgerichtet ist, bieten User Stories eine nützliche Ergänzung bei der Kommunikation zwischen dem Planungsteam und den Entwicklungsteams sowie zwischen dem Planungsteam und dem Kunden.
 Besonders in der Zusammenarbeit mit Stakeholdern sind User Stories hilfreich, da sie die Perspektive des Anwenders stärker in den Vordergrund rücken.
 Zudem können sie bspw. in der Dokumentation eines Domain-Walkthroughs eingesetzt werden \cite{palmer02}.
@@ -634,16 +633,16 @@ folgende gehören:
 \subsection{Automatische Verarbeitung von User Stories am Beispiel von Cucumber}
 Epics und User Stories werden, ausgehend von der Definition in \ref{def:epics_user_stories}, immer in einer bestimmten Struktur formuliert.
 Diese Struktur unterstützt nicht nur menschliche Leser, sondern ermöglicht auch die computergestützte Weiterverarbeitung der User Story.
-Ein Beispiel wo dies zum Einsatz kommt ist die Software \emph{Cucumber}.
+Ein Beispiel, wo dies zum Einsatz kommt, ist die Software \emph{Cucumber}.
 
-``Cucumber ist ein Tool um Akzeptanztest, welche in verständlicher Sprache verfasst sind, automatisiert auszuführen'' \cite{the_cucumber_open_source_project_cucumber_2025}.
+``Cucumber ist ein Tool um Akzeptanztests, welche in verständlicher Sprache verfasst sind, automatisiert auszuführen'' \cite{the_cucumber_open_source_project_cucumber_2025}.
 Mit Hilfe von Cucumber ist es möglich sogenannte \emph{Features} in einer von aktuell 80 gesprochenen Sprachen zu verfassen.
 Dabei muss lediglich die simple Gherkin-Grammatik eingehalten werden.
 
 Basierend auf diesen Features kann Cucumber dann automatische Akzeptanztests für das jeweilige Feature durchführen.
 Insbesondere können durch diese automatisierte Test-erzeugung auch neu erstellte User Stories direkt mit dem bestehenden System
-überprüft werden. Dadurch kann direkt erkannt werden, an welche Teile einer User Story noch Implementationsbedarf haben und welche
-Teile möglicherweise schon durch bestehenden Quellcode abgedeckt ist.
+überprüft werden. Dadurch kann direkt erkannt werden, an welchen Teilen einer User Story noch Implementationsbedarf besteht und welche
+Teile möglicherweise schon durch bestehenden Quellcode abgedeckt sind.
 
 \subsubsection{Workflow an einem Beispiel}
 In diesem Abschnitt wird für eine im vorhergehenden Kapitel formulierte User Story beispielhaft eine Umsetzung
@@ -664,7 +663,7 @@ Scenario: <Card der User Story>
     Then  <Akzeptanzbedingung des Tests>
 \end{minted}
 
-Wie dieses Schema für die oben genannte User Story umgesetzt werden kann ist in Listing \ref{listing:1} zu sehen.
+Wie dieses Schema für die oben genannte User Story umgesetzt werden kann, ist in Listing \ref{listing:1} zu sehen.
 
 \begin{listing}[!h]
 	\inputminted{cucumber}{cucumber/course_modification.feature}
@@ -708,58 +707,58 @@ Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 % Dabei wurde auf Vorteile und aber auch auf Herausforderungen, welche beim Einsatz dieser Methode für das Requirements Engineering auftreten, eingegangen.
 % Dies wurde beispielhaft anhand der drei agilen Vorgehensmodelle Kanban, Scrum und Feature Driven Development erörtert.
 
-Epics und User Stories sind eine Methode welche für Requirements Engineering im Sinn des Agilen Manifest \cite{agile_manifesto_2001} geeignet sind.
-Dies kann durch folgende drei Grundsätze des Agilen Manifest verdeutlicht werden.
+Epics und User Stories sind eine Methode, welche für Requirements Engineering im Sinn des Agilen Manifests \cite{agile_manifesto_2001} geeignet sind.
+Dies kann durch folgende drei Grundsätze des Agilen Manifests verdeutlicht werden.
 
 \subsection{Individuals and interactions over processes and tools}
 Epics und User Stories tragen zu einer klaren Kommunikation sowohl im Team (intern) als auch zwischen Kunde und Entwicklerteam (extern) bei.
 Dies zeigt sich auch häufig darin, dass durch den Einsatz von User Stories die Perspektive des Kunden besser verstanden werden kann,
-da dieser tief in Prozess der Anforderungsanalyse involviert ist.
+da dieser tief in den Prozess der Anforderungsanalyse involviert ist.
 
 \subsection{Customer collaboration over contract negotiation}
 Wie schon im vorhergehenden Punkt angesprochen ist der Kunde beim Erstellen und Bearbeiten von User Stories fest mit eingebunden.
-In traditionellen Methoden der Anforderungsanalyse werden häufig Anforderung einmalig erstellt und dann vertraglich festgesetzt.
-Im Gegenteil dazu werden bei User Stories Anforderung auch nach ihrer Erstellung noch bearbeitet.
+In traditionellen Methoden der Anforderungsanalyse werden häufig Anforderungen einmalig erstellt und dann vertraglich festgesetzt.
+Im Gegenteil dazu werden bei User Stories Anforderungen auch nach ihrer Erstellung noch bearbeitet.
 Ganz nach dem Qualitätsmerkmal "Negotiable" der INVEST-Kriterien, werden mit User Stories
-immer wieder durch Kommunikation mit dem Kunden Details erarbeitet oder Teile der User Story angepasst, da die zugrundeliegenden
-Anforderungen sich von Seite des Kunden verändert haben.
+immer wieder durch Kommunikation mit dem Kunden Details erarbeitet oder Teile der User Story angepasst, da sich die zugrundeliegenden
+Anforderungen von Seiten des Kunden verändert haben.
 
 \subsection{Responding to change over following a plan}
 Zuletzt befähigen Epics und User Stories auch agile Entwicklungsteams auf sich verändernde Anforderungen zu reagieren.
 Im letzten Abschnitt wurde schon die Kommunikation zum Kunden als wichtiges Mittel zur Reaktion auf Veränderungen erwähnt.
-Darüber hinaus bieten User Stories aber auch durch ihre Größe eine geeignete Struktur für ein Entwicklungsteam um einerseits
+Darüber hinaus bieten User Stories aber auch durch ihre Größe eine geeignete Struktur für ein Entwicklungsteam, um einerseits
 Anforderungen für die Implementation auszuwählen, aber auch in regelmäßigen Zeitabständen den Kunden über den
 Stand des Projektes zu informieren und auf dessen Rückmeldung zu reagieren.
 
 Trotz der wesentlichen Vorteile von Epics und User Stories sollen hier auch nocheinmal einige Herausforderungen aufgeführt
 werden, auf welche Entwicklungsteams bei ihrem Einsatz stoßen werden.
 
-Wie schon bei der Einführung von Epics und User Stories erwähnt, ist das Formulieren von nichtfunktionalen Anforderung als User Stories
+Wie schon bei der Einführung von Epics und User Stories erwähnt, ist das Formulieren von nichtfunktionalen Anforderungen als User Stories
 schwierig. Es gibt Techniken, die dieses Problem lösen, doch erfordert deren Einsatz ein Bewusstsein für diese Herausforderung und ein Verständnis dieser Techniken.
 
 Außerdem besteht die Gefahr der Überspezialisierung auf einen bestimmten Kunden.
 Wenn im Rahmen der Anforderungsanalyse ein Großteil der User Stories nur von einem einzelnen Kunden formuliert wird,
-können dadurch Anforderungen, welche nur dieser eine Kunde hat überbewertet und Anforderungen von anderen Kunden unterbewertet werden.
-Auch die Anforderungen, welche Möglicherweise durch andere Stakeholder der Software (Maintenance, Deployment etc.) an die Software gestellt werden
+können dadurch Anforderungen, welche nur dieser eine Kunde hat, überbewertet und Anforderungen von anderen Kunden unterbewertet werden.
+Auch die Anforderungen, welche möglicherweise durch andere Stakeholder der Software (Maintenance, Deployment etc.) an die Software gestellt werden
 können in diesem Prozess untergehen.
 
 Der effiziente Einsatz von Epics und User Stories erfordert an vielen Stellen Erfahrung.
 Dies kann insbesondere beim Schätzen und Herunterbrechen von User Stories zu Effizienzeinbußen
-in unerfahrenen Teams führen. Ein einfaches Mittel dem entgegenzuwirken ist Teammitglieder mit unterschiedlichen
+in unerfahrenen Teams führen. Ein einfaches Mittel, dem entgegenzuwirken, ist Teammitglieder mit unterschiedlichen
 Erfahrungsstufen zusammenzustellen und einen aktiven Wissenstransfer anzuregen.
 
 \section{Zusammenfassung} \label{sec:zusammenfassung}
-Im Rahmen dieser Arbeit wurden Epics und User Stories als Methode des agilen Requirement Engineering vorgestellt.
+Im Rahmen dieser Arbeit wurden Epics und User Stories als Methode des agilen Requirements Engineering vorgestellt.
 
 Der korrekte Umgang mit User Stories wurde theoretisch anhand des INVEST-Modells erörtert und exemplarisch
 an den drei verschiedenen agilen Vorgehensmodellen Kanban, Scrum und Feature Driven Development dargestellt.
 Dabei wurden auch mit dem Einsatz von Epics und User Stories verbundene Herausforderungen angesprochen und mögliche
 Lösungsmethoden vorgeschlagen.
 
-Zuletzt wurden die Erkenntisse dieser Arbeit ausgewertet und die Bedeutung von Epics und User Stories für die agile Softwareentwicklung
+Zuletzt wurden die Erkenntnisse dieser Arbeit ausgewertet und die Bedeutung von Epics und User Stories für die agile Softwareentwicklung
 diskutiert.
 Basierend auf dieser Diskussion kommen wir zu dem Schluss, dass Epics und User Stories ein geeignetes Mittel für das
-Requirements Engineering in agilen Softwareprojekten ist und wesentlich zu deren Erfolg beiträgt.
+Requirements Engineering in agilen Softwareprojekten sind und wesentlich zu deren Erfolg beitragen.
 
 
 
