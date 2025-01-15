@@ -1,5 +1,5 @@
 \documentclass[acmtog]{acmart}
-\usepackage[ngerman, english]{babel}
+\usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
@@ -58,7 +58,7 @@
 	In dieser Arbeit wurde der Einsatz und die Wirkung von Epics und User Stories in der agilen Softwareentwicklung untersucht.
 	Dazu wurden drei agile Vorgehensmodelle und die beim Einsatz von Epics und User Stories
 	auftretenden Herausforderungen betrachtet.
-	Für die Herausforderungen wurden jeweils mögliche Lösungsvorschläge gefunden und anhand von kurzen Beispielen beschrieben.
+	Für diese Herausforderungen wurden jeweils mögliche Lösungsvorschläge gefunden und anhand von kurzen Beispielen beschrieben.
 
 	Im Verlauf der Recherche sind die Autoren zu dem Schluss gekommen, dass Epics und User Stories ein hilfreiches Werkzeug
 	für das Requirements Engineering sind. Insbesondere für die agile Softwareentwicklung ist dieses Konzept besser geeignet als traditionelle
@@ -691,8 +691,7 @@ die in der Feature-Datei spezifizierten Parameter, in diesem Fall die Strings \t
 Der für diesen Zweck im Beispiel verwendete Quellcode ist in Listing \ref{listing:2} zu finden.
 
 Das hier vorgestellte Beispiel und der zugehörige Quellcode sind online auf GitHub in folgenden Repository verfügbar:
-\url{https://github.com/Beleg-01-Requirements-Engineering/cucumber-example}%{\texttt{https://github.com/Beleg-01-Requirements-Engineering/
-		%cucumber-example}}.
+\url{https://github.com/Beleg-01-Requirements-Engineering/cucumber-example}.
 Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 
 
@@ -707,58 +706,57 @@ Dort ist ebenfalls eine Anleitung zum Ausführen der Tests zu finden.
 % Dabei wurde auf Vorteile und aber auch auf Herausforderungen, welche beim Einsatz dieser Methode für das Requirements Engineering auftreten, eingegangen.
 % Dies wurde beispielhaft anhand der drei agilen Vorgehensmodelle Kanban, Scrum und Feature Driven Development erörtert.
 
-Epics und User Stories sind eine Methode, welche für Requirements Engineering im Sinn des Agilen Manifests \cite{agile_manifesto_2001} geeignet sind.
+Epics und User Stories sind eine Methode, welche sich für das Requirements Engineering im Sinn des Agilen Manifests \cite{agile_manifesto_2001} eignet.
 Dies kann durch folgende drei Grundsätze des Agilen Manifests verdeutlicht werden.
 
 \subsection{Individuals and interactions over processes and tools}
-Epics und User Stories tragen zu einer klaren Kommunikation sowohl im Team (intern) als auch zwischen Kunde und Entwicklerteam (extern) bei.
-Dies zeigt sich auch häufig darin, dass durch den Einsatz von User Stories die Perspektive des Kunden besser verstanden werden kann,
-da dieser tief in den Prozess der Anforderungsanalyse involviert ist.
+Epics und User Stories tragen zu einer klaren Kommunikation bei, sowohl im Team (intern) als auch zwischen Kunde und Entwicklerteam (extern).
+Dies zeigt sich unter anderem darin, dass durch den Einsatz von User Stories die Perspektive des Kunden besser verstanden werden kann,
+da dieser intensiv in den Prozess der Anforderungsanalyse involviert ist.
 
 \subsection{Customer collaboration over contract negotiation}
-Wie schon im vorhergehenden Punkt angesprochen ist der Kunde beim Erstellen und Bearbeiten von User Stories fest mit eingebunden.
-In traditionellen Methoden der Anforderungsanalyse werden häufig Anforderungen einmalig erstellt und dann vertraglich festgesetzt.
-Im Gegenteil dazu werden bei User Stories Anforderungen auch nach ihrer Erstellung noch bearbeitet.
+Wie bereits im vorhergehenden Punkt angesprochen ist der Kunde aktiv in die Erstellung und Bearbeitung von User Stories eingebunden.
+In traditionellen Methoden der Anforderungsanalyse werden Anforderungen häufig einmalig erstellt und dann vertraglich festgesetzt.
+Im Gegensatz dazu werden bei User Stories Anforderungen auch nach ihrer Erstellung noch bearbeitet.
 Ganz nach dem Qualitätsmerkmal ``Negotiable'' der INVEST-Kriterien, werden mit User Stories
-immer wieder durch Kommunikation mit dem Kunden Details erarbeitet oder Teile der User Story angepasst, da sich die zugrundeliegenden
+durch regelmäßige Kommunikation mit dem Kunden immer wieder Details erarbeitet oder Teile der User Story angepasst, da sich die zugrundeliegenden
 Anforderungen von Seiten des Kunden verändert haben.
 
 \subsection{Responding to change over following a plan}
 Zuletzt befähigen Epics und User Stories auch agile Entwicklungsteams auf sich verändernde Anforderungen zu reagieren.
-Im letzten Abschnitt wurde schon die Kommunikation zum Kunden als wichtiges Mittel zur Reaktion auf Veränderungen erwähnt.
-Darüber hinaus bieten User Stories aber auch durch ihre Größe eine geeignete Struktur für ein Entwicklungsteam, um einerseits
-Anforderungen für die Implementation auszuwählen, aber auch in regelmäßigen Zeitabständen den Kunden über den
-Stand des Projektes zu informieren und auf dessen Rückmeldung zu reagieren.
+Im vorherigen Abschnitt wurde bereits die Kommunikation mit dem Kunden als wichtiges Mittel zur Reaktion auf Veränderungen erwähnt.
+Darüber hinaus bieten User Stories durch ihre Größe eine geeignete Struktur für Entwicklungsteams, um einerseits
+Anforderungen für die Implementierung auszuwählen und andererseits den Kunden regelmäßig über den
+Stand des Projektes zu informieren sowie auf dessen Rückmeldung einzugehen.
 
-Trotz der wesentlichen Vorteile von Epics und User Stories sollen hier auch nocheinmal einige Herausforderungen aufgeführt
-werden, auf welche Entwicklungsteams bei ihrem Einsatz stoßen werden.
+Trotz der wesentlichen Vorteile von Epics und User Stories sollen hier nocheinmal einige Herausforderungen aufgeführt
+werden, denen Entwicklungsteams bei ihrem Einsatz begegnen können.
 
-Wie schon bei der Einführung von Epics und User Stories erwähnt, ist das Formulieren von nichtfunktionalen Anforderungen als User Stories
-schwierig. Es gibt Techniken, die dieses Problem lösen, doch erfordert deren Einsatz ein Bewusstsein für diese Herausforderung und ein Verständnis dieser Techniken.
+Wie schon bei der Einführung von Epics und User Stories erwähnt, ist das Formulieren nichtfunktionaler Anforderungen als User Stories
+schwierig. Es gibt zwar Techniken, die dieses Problem lösen, doch erfordert deren Einsatz ein Bewusstsein für diese Herausforderung und ein Verständnis dieser Techniken.
 
 Außerdem besteht die Gefahr der Überspezialisierung auf einen bestimmten Kunden.
-Wenn im Rahmen der Anforderungsanalyse ein Großteil der User Stories nur von einem einzelnen Kunden formuliert wird,
-können dadurch Anforderungen, welche nur dieser eine Kunde hat, überbewertet und Anforderungen von anderen Kunden unterbewertet werden.
-Auch die Anforderungen, welche möglicherweise durch andere Stakeholder der Software (Maintenance, Deployment etc.) an die Software gestellt werden
+Wenn im Rahmen der Anforderungsanalyse ein Großteil der User Stories von einem einzelnen Kunden formuliert wird,
+können dessen spezifische Anforderungen überbewertet und die Anforderungen anderen Kunden dafür unterbewertet werden.
+Auch die Anforderungen, welche möglicherweise durch andere Stakeholder der Software (Maintenance, Deployment etc.) gestellt werden,
 können in diesem Prozess untergehen.
 
 Der effiziente Einsatz von Epics und User Stories erfordert an vielen Stellen Erfahrung.
-Dies kann insbesondere beim Schätzen und Herunterbrechen von User Stories zu Effizienzeinbußen
-in unerfahrenen Teams führen. Ein einfaches Mittel, dem entgegenzuwirken, ist Teammitglieder mit unterschiedlichen
+Insbesondere beim Schätzen und Herunterbrechen von User Stories kann dies in unerfahrenen Teams zu Effizienzeinbußen führen. Ein einfaches Mittel, dem entgegenzuwirken, besteht darin, Teammitglieder mit unterschiedlichen
 Erfahrungsstufen zusammenzustellen und einen aktiven Wissenstransfer anzuregen.
 
 \section{Zusammenfassung} \label{sec:zusammenfassung}
 Im Rahmen dieser Arbeit wurden Epics und User Stories als Methode des agilen Requirements Engineering vorgestellt.
 
-Der korrekte Umgang mit User Stories wurde theoretisch anhand des INVEST-Modells erörtert und exemplarisch
-an den drei verschiedenen agilen Vorgehensmodellen Kanban, Scrum und Feature Driven Development dargestellt.
-Dabei wurden auch mit dem Einsatz von Epics und User Stories verbundene Herausforderungen angesprochen und mögliche
+Der korrekte Umgang mit User Stories wurde theoretisch anhand des INVEST-Modells erläutert und exemplarisch
+an den drei agilen Vorgehensmodellen Kanban, Scrum und Feature Driven Development dargestellt.
+Dabei wurden auch Herausforderungen im Zusammenhang mit dem Einsatz von Epics und User Stories angesprochen und mögliche
 Lösungsmethoden vorgeschlagen.
 
-Zuletzt wurden die Erkenntnisse dieser Arbeit ausgewertet und die Bedeutung von Epics und User Stories für die agile Softwareentwicklung
+Abschließend wurden die Erkenntnisse dieser Arbeit ausgewertet und die Bedeutung von Epics und User Stories für die agile Softwareentwicklung
 diskutiert.
 Basierend auf dieser Diskussion kommen wir zu dem Schluss, dass Epics und User Stories ein geeignetes Mittel für das
-Requirements Engineering in agilen Softwareprojekten sind und wesentlich zu deren Erfolg beitragen.
+Requirements Engineering in agilen Softwareprojekten darstellen und wesentlich zu deren Erfolg beitragen.
 
 
 
